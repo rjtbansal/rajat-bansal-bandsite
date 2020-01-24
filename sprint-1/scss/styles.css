@@ -16,7 +16,7 @@ body {
 
 .main-background {
   background: url(../../Assets/Images/cover-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
-  height: 50rem;
+  height: 30rem;
 }
 
 .header {
@@ -38,6 +38,11 @@ body {
 
 .main-background__heading {
   margin-top: 0;
+  font-size: 24px;
+  line-height: 2rem;
+  padding: 50% 0 50% 1rem;
+  color: #FFFFFF;
+  width: 65%;
 }
 
 .nav {
