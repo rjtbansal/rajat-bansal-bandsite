@@ -17,8 +17,8 @@ body {
 }
 
 .main-background{
-    background: url(../../Assets/Images/cover-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
-    height: 30rem;
+    background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
+    height: 15rem;
 }
 
 .header {
@@ -37,9 +37,19 @@ body {
     margin-top: 0;
     font-size: 24px;
     line-height: 2rem;
-    padding: 50% 0 50% 1rem;
+    padding: 5rem 0 5rem 1rem;
     color: $white-text;
     width: 65%;
+}
+
+// .about {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.about__image {
+    width: 18rem;
 }
 
 .nav {
@@ -55,7 +65,10 @@ body {
     color: #E1E1E1;
 }
 
-
+.photo-gallery__image{
+    width: 18rem;
+    margin-bottom: 1rem;
+}
 
 .active {
     font-weight: bold;
@@ -67,4 +80,10 @@ body {
 .footer {
     background-color: $header-footer-background;
     color: $white-text;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
