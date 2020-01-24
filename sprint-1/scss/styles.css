@@ -3,9 +3,15 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Linotype';
+  src: url("../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
+}
+
 body {
   margin: 0;
   width: 20rem;
+  font-family: 'Linotype';
 }
 
 .main-background {
@@ -26,8 +32,16 @@ body {
   color: #FFFFFF;
 }
 
+.header__logo {
+  padding-bottom: 1rem;
+}
+
 .main-background__heading {
   margin-top: 0;
+}
+
+.nav {
+  height: 3.5rem;
 }
 
 .nav__list {
@@ -38,6 +52,14 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-right: 4rem;
+  color: #E1E1E1;
+}
+
+.active {
+  font-weight: bold;
+  color: #FFFFFF;
+  border-bottom: thick solid;
+  padding-bottom: 1rem;
 }
 
 .footer {
