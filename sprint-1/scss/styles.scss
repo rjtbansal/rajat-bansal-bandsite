@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-family: 'Linotype-Bold';
 }
 
@@ -74,10 +74,8 @@ p{
 
 .main-background__heading{
     margin-top: 0;
-    font-size: 1.5rem;
-    line-height: 2rem;
     color: $white-text;
-    width: 15rem;
+    width: 70%;
     padding-left: 1.5rem;
 }
 
@@ -125,6 +123,10 @@ p{
     flex-direction: column;
 }
 
+.photo-gallery {
+    background-color: #FAFAFA;
+    padding-top: 0.5rem;
+}
 .photo-gallery__image{
     width: 90%;
     margin-bottom: 1rem;
@@ -166,13 +168,37 @@ p{
 
 .footer--copyright{
     padding-bottom: 1rem;
-    width: 55%;
+    // width: 30%;
     margin-bottom: 0;
+}
+
+.footer-rights{
+    display: block;
 }
 
 
 @media screen and (min-width: $tablet-width) {
 
+    h1 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-family: 'Linotype-Bold';
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        font-family: 'Demi';
+    }
+    
+    h4 {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+    
+    p{
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 
     .main-background {
         height: 25rem;
@@ -189,6 +215,21 @@ p{
     .nav__item {
         margin-left: 1rem;
         margin-right: 2rem;
+        
+        //required to control space between nav items and reduce bottom border in tab mode 
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main-background__heading {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        width: 70%;
+    }
+
+    .about__quote, .about-musicians__names {
+        font-size: 1.8rem;
+        width: 85%;
     }
 
     .about__description{
@@ -217,6 +258,11 @@ p{
         padding-bottom: 1.5rem;
     }
 
+    .footer__title {
+        padding-top: 0;
+    }
+    
+
     .footer--info-block{
         display: flex;
         justify-content: space-between;
@@ -226,16 +272,26 @@ p{
 
     .footer__icon {
         padding-right: 1rem;
-        padding-top: 1rem;
+        padding-top: 3rem;
     }
 
     .footer--copyright{
         width: 100%;
     }
+
+    .footer-rights{
+        display: inline;
+    }
     
 }
 
 @media screen and (min-width: $desktop-width) {
+
+    .about__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .header__logo {
         margin-left: 10rem;
     }
@@ -248,11 +304,15 @@ p{
     }
 
     .about, .photo-gallery{
-        margin-left: 10rem;
+        padding-left: 10rem;
+    }
+
+    .about__image {
+        width: 85%;
     }
 
     .about__description{
-        width: 80%;
+        width: 85%;
     }
 
     .footer__title, .footer--copyright{
