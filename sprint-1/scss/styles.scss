@@ -101,6 +101,11 @@ body {
     margin-left: 1rem;
 }
 
+.about__description {
+    display: flex;
+    flex-direction: column;
+}
+
 .photo-gallery__image{
     width: 90%;
     margin-bottom: 1rem;
@@ -162,6 +167,14 @@ body {
     .nav__item {
         margin-left: 1rem;
         margin-right: 2rem;
+    }
+
+    .about__description{
+        flex-direction: row;
+    }
+
+    .about__description--para2{
+        margin-left: 1rem;
     }
 
     .photo-gallery__image{
