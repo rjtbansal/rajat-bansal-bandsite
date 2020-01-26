@@ -69,9 +69,9 @@ body {
     margin-top: 0;
     font-size: 1.5rem;
     line-height: 2rem;
-    // padding: 5rem 0 5rem 1rem;
     color: $white-text;
     width: 15rem;
+    padding-left: 1.5rem;
 }
 
 // .about {
@@ -139,10 +139,16 @@ body {
     display: none;
 }
 
+.footer--copyright{
+    padding-bottom: 1rem;
+    width: 40%;
+}
+
+
 @media screen and (min-width: $tablet-width) {
 
     .main-background {
-        height: 20rem;
+        height: 25rem;
     }
 
     .header {
@@ -158,6 +164,39 @@ body {
         margin-right: 2rem;
     }
 
+    .photo-gallery__image{
+        width: 30%;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+
+    .footer__bandsite--logo {
+        display: block;
+    }
+
+    .footer--block1{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer--info-block{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+
+    .footer__icon {
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    .footer--copyright{
+        width: 100%;
+    }
     
 }
 

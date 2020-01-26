@@ -73,6 +73,7 @@ body {
   line-height: 2rem;
   color: #FFFFFF;
   width: 15rem;
+  padding-left: 1.5rem;
 }
 
 .about__image {
@@ -134,9 +135,14 @@ body {
   display: none;
 }
 
+.footer--copyright {
+  padding-bottom: 1rem;
+  width: 40%;
+}
+
 @media screen and (min-width: 768px) {
   .main-background {
-    height: 20rem;
+    height: 25rem;
   }
   .header {
     -webkit-box-orient: horizontal;
@@ -150,6 +156,41 @@ body {
   .nav__item {
     margin-left: 1rem;
     margin-right: 2rem;
+  }
+  .photo-gallery__image {
+    width: 30%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .footer__bandsite--logo {
+    display: block;
+  }
+  .footer--block1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer--info-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+  }
+  .footer__icon {
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+  .footer--copyright {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
