@@ -35,6 +35,11 @@ h2 {
   font-family: 'Demi';
 }
 
+h4 {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -145,25 +150,29 @@ p {
 }
 
 .footer__title {
-  padding-top: 1.5rem;
+  padding-top: 4rem;
+  font-size: 3rem;
 }
 
 .footer__icons {
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
 .footer__icon {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .footer__bandsite--logo {
   display: none;
 }
 
+.footer__contact--name {
+  font-size: 1rem;
+}
+
 .footer--copyright {
   padding-bottom: 1rem;
-  width: 40%;
+  width: 55%;
   margin-bottom: 0;
 }
 
