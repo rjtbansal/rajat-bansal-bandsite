@@ -148,6 +148,7 @@ body {
 .footer--copyright {
   padding-bottom: 1rem;
   width: 40%;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -210,6 +211,37 @@ body {
   }
   .footer--copyright {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-left: 10rem;
+  }
+  .main-background {
+    height: 41.875rem;
+  }
+  .main-background__heading {
+    margin-left: 8.5rem;
+  }
+  .about, .photo-gallery {
+    margin-left: 10rem;
+  }
+  .about__description {
+    width: 80%;
+  }
+  .footer__title, .footer--copyright {
+    margin-left: 8rem;
+  }
+  .footer--block1 {
+    width: 90%;
+  }
+  .footer--info-block {
+    width: 60%;
+    margin-left: 8rem;
+  }
+  .footer__icons {
+    margin-right: 30rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
