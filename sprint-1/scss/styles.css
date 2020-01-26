@@ -45,6 +45,10 @@ p {
   line-height: 1.125rem;
 }
 
+.header__logo--link {
+  text-decoration: none;
+}
+
 .main-background {
   background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
   height: 15rem;
@@ -67,6 +71,9 @@ p {
           flex-direction: column;
   padding-top: 2rem;
   color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo {
@@ -86,6 +93,7 @@ p {
 
 .nav {
   height: 3.5rem;
+  width: 100%;
 }
 
 .about__quote, .about-musicians__names {
@@ -104,8 +112,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-right: 4rem;
   color: #E1E1E1;
 }
@@ -212,6 +221,9 @@ p {
   .header__logo {
     margin-left: 1rem;
   }
+  .nav {
+    width: inherit;
+  }
   .nav__item {
     margin-left: 1rem;
     margin-right: 2rem;
@@ -280,6 +292,9 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
+  .nav {
+    width: inherit;
+  }
   .about__div {
     display: -webkit-box;
     display: -ms-flexbox;

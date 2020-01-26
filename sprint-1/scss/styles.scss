@@ -51,6 +51,9 @@ p{
     line-height: 1.125rem;
 }
 
+.header__logo--link{
+    text-decoration: none;
+}
 
 .main-background{
     background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
@@ -66,6 +69,7 @@ p{
     flex-direction: column;
     padding-top: 2rem;
     color: $white-text;
+    align-items: center;
 }
 
 .header__logo{
@@ -86,6 +90,7 @@ p{
 
 .nav {
     height: 3.5rem;
+    width: 100%;
 }
 
 .about__quote, .about-musicians__names {
@@ -103,7 +108,7 @@ p{
 .nav__list {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-right: 4rem;
     color: #E1E1E1;
 }
@@ -111,7 +116,7 @@ p{
 // for aligning bottom border properly
 .nav__item{
     padding-left: 25%;
-    padding-right: 25%;
+    padding-right: 25%;    
 }
 
 .about, .photo-gallery{
@@ -212,6 +217,10 @@ p{
         margin-left: 1rem;
     }
 
+    .nav {
+        width: inherit;
+    }
+
     .nav__item {
         margin-left: 1rem;
         margin-right: 2rem;
@@ -286,6 +295,11 @@ p{
 }
 
 @media screen and (min-width: $desktop-width) {
+
+    // required so that nav items dont take entire space
+    .nav {
+        width: inherit;
+    }
 
     .about__div{
         display: flex;
