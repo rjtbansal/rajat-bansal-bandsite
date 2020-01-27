@@ -173,11 +173,8 @@ h4,p {
 
 
 @media screen and (min-width: $tablet-width) {
-
     h1 {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-        font-family: 'Linotype-Bold';
+        @include set-font-properties(2.25rem, 2.75rem, 'Linotype-Bold');
     }
     
     h2 {
@@ -185,58 +182,54 @@ h4,p {
         font-family: 'Demi';
     }
     
-    h4 {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-    }
-    
-    p{
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+    h4,p {
+        @include set-font-properties(0.875rem, 1.375rem)
     }
 
-    .main-background {
-        height: 25rem;
-    }
 
     .header {
         flex-direction: row;
-    }
 
-    .header__logo {
-        margin-left: 1rem;
+        &__logo {
+            margin-left: 1rem;
+        }
     }
 
     .nav {
         width: inherit;
+
+        &__item {
+            margin-left: 1rem;
+            margin-right: 2rem;
+            
+            //required to control space between nav items and reduce bottom border in tab mode 
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
-    .nav__item {
-        margin-left: 1rem;
-        margin-right: 2rem;
-        
-        //required to control space between nav items and reduce bottom border in tab mode 
-        padding-left: 0;
-        padding-right: 0;
+    .main-background {
+        height: 25rem;
+
+        &__heading {
+            @include set-font-properties(3.75rem, 4.25rem, 'Linotype-Bold');
+            width: 70%;
+        }
     }
 
-    .main-background__heading {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-        width: 70%;
-    }
+    .about {
+        &__quote, &-musicians__names {
+            font-size: 1.8rem;
+            width: 85%;
+        }
 
-    .about__quote, .about-musicians__names {
-        font-size: 1.8rem;
-        width: 85%;
-    }
+        &__description{
+            flex-direction: row;
+        }
 
-    .about__description{
-        flex-direction: row;
-    }
-
-    .about__description--para2{
-        margin-left: 1rem;
+        &__description--para2{
+            margin-left: 1rem;
+        }
     }
 
     .photo-gallery__image{
@@ -245,43 +238,42 @@ h4,p {
         margin-right: 1rem;
     }
 
-    .footer__bandsite--logo {
-        display: block;
-    }
+    .footer {
+        &__bandsite--logo {
+            display: block;
+        }
 
-    .footer--block1{
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
+        &--block1{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
 
-    .footer__title {
-        padding-top: 0;
-    }
-    
+        &__title {
+            padding-top: 0;
+        }
 
-    .footer--info-block{
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-    }
+        &--info-block{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+        }
 
+        &__icon {
+            padding-right: 1rem;
+            padding-top: 3rem;
+        }
 
-    .footer__icon {
-        padding-right: 1rem;
-        padding-top: 3rem;
-    }
+        &--copyright{
+            width: 100%;
+        }
 
-    .footer--copyright{
-        width: 100%;
-    }
-
-    .footer-rights{
-        display: inline;
-    }
-    
+        &-rights{
+            display: inline;
+        }
+    }    
 }
 
 @media screen and (min-width: $desktop-width) {

@@ -189,22 +189,16 @@ h4, p {
   h1 {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-family: 'Linotype-Bold';
+    font-family: "Linotype-Bold";
   }
   h2 {
     font-size: 1.5rem;
     font-family: 'Demi';
   }
-  h4 {
+  h4, p {
     font-size: 0.875rem;
     line-height: 1.375rem;
-  }
-  p {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-  .main-background {
-    height: 25rem;
+    font-family: inherit;
   }
   .header {
     -webkit-box-orient: horizontal;
@@ -224,9 +218,13 @@ h4, p {
     padding-left: 0;
     padding-right: 0;
   }
+  .main-background {
+    height: 25rem;
+  }
   .main-background__heading {
     font-size: 3.75rem;
     line-height: 4.25rem;
+    font-family: "Linotype-Bold";
     width: 70%;
   }
   .about__quote, .about-musicians__names {
