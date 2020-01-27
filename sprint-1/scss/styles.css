@@ -26,32 +26,24 @@ body {
 h1 {
   font-size: 2rem;
   line-height: 2.5rem;
-  font-family: 'Linotype-Bold';
+  font-family: "Linotype-bold";
 }
 
 h2 {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: 'Demi';
+  font-family: "Demi";
 }
 
-h4 {
+h4, p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-}
-
-p {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-}
-
-.header__logo--link {
-  text-decoration: none;
+  font-family: inherit;
 }
 
 .main-background {
   background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
-  height: 15rem;
+  height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

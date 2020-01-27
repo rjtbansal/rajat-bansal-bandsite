@@ -24,40 +24,32 @@ $white-text: #FFFFFF;
     src: url('../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf');
 }
 
+@mixin set-font-properties($font-size, $line-height, $font-family:inherit) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-family;
+}
 body {
     margin: 0;
     font-family: 'Linotype';
 }
 
 h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-family: 'Linotype-Bold';
+    @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
 }
 
 h2 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: 'Demi';
+    @include set-font-properties(0.875rem, 1.375rem, 'Demi');
 }
 
-h4 {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+h4,p {
+    @include set-font-properties(0.8125rem, 1.125rem)
 }
 
-p{
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-}
-
-.header__logo--link{
-    text-decoration: none;
-}
 
 .main-background{
     background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
-    height: 15rem;
+    height: 20rem;
     display: flex;
     align-items: center;
 }
