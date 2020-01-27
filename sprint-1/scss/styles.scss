@@ -24,7 +24,7 @@ $white-text: #FFFFFF;
     src: url('../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf');
 }
 
-@mixin set-font-properties($font-size, $line-height, $font-family:inherit) {
+@mixin set-font-properties($font-size, $line-height:inherit, $font-family:inherit) {
     font-size: $font-size;
     line-height: $line-height;
     font-family: $font-family;
@@ -52,6 +52,13 @@ h4,p {
     height: 20rem;
     display: flex;
     align-items: center;
+
+    &__heading {
+        margin-top: 0;
+        color: $white-text;
+        width: 70%;
+        padding-left: 1.5rem;
+    }
 }
 
 
@@ -62,71 +69,63 @@ h4,p {
     padding-top: 2rem;
     color: $white-text;
     align-items: center;
+
+    &__logo {
+        padding-bottom: 1rem;
+    }
 }
 
-.header__logo{
-    padding-bottom: 1rem;
-}
-
-.main-background__heading{
-    margin-top: 0;
-    color: $white-text;
-    width: 70%;
-    padding-left: 1.5rem;
-}
-
-
-.about__image {
-    width: 90%;
-}
 
 .nav {
     height: 3.5rem;
     width: 100%;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 4rem;
+        color: #E1E1E1;
+    }
+
+    &__item {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
 }
 
-.about__quote, .about-musicians__names {
-    font-size: 1.5rem;
-    font-family: 'Demi';
-}
-
-.about__quote--author {
-    display: block;
-    padding-top: 1rem;
-    font-size: 1.2rem;
-}
-
-
-.nav__list {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    margin-right: 4rem;
-    color: #E1E1E1;
-}
-
-// for aligning bottom border properly
-.nav__item{
-    padding-left: 25%;
-    padding-right: 25%;    
-}
-
-.about, .photo-gallery{
+.about {
     margin-left: 1rem;
+
+    &__image {
+        width: 90%;
+    }
+
+    &__quote, &-musicians__names {
+        @include set-font-properties(1.5rem, inherit, 'Demi');
+    }
+
+    &__quote--author {
+        display: block;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.about__description {
-    display: flex;
-    flex-direction: column;
-}
-
-.photo-gallery {
+.photo-gallery{
+    margin-left: 1rem;
     background-color: #FAFAFA;
     padding-top: 0.5rem;
-}
-.photo-gallery__image{
-    width: 90%;
-    margin-bottom: 1rem;
+
+    &__image{
+        width: 90%;
+        margin-bottom: 1rem;
+    }
 }
 
 .active {
@@ -140,37 +139,36 @@ h4,p {
     background-color: $header-footer-background;
     color: $white-text;
     padding-left: 1rem;
-}
 
-.footer__title {
-    padding-top: 4rem;
-    font-size: 3rem;
-}
+    &__title {
+        padding-top: 4rem;
+        font-size: 3rem;
+    }
 
-.footer__icons {
-    padding-bottom: 1.5rem;
-}
+    &__icons {
+        padding-bottom: 1.5rem;
+    }
 
-.footer__icon {
-    margin-right: 2rem;
-}
+    &__icon {
+        margin-right: 2rem;
+    }
 
-.footer__bandsite--logo{
-    display: none;
-}
+    &__bandsite--logo{
+        display: none;
+    }
 
-.footer__contact--name{
-    font-size: 1rem;
-}
+    &__contact--name{
+        font-size: 1rem;
+    }
 
-.footer--copyright{
-    padding-bottom: 1rem;
-    // width: 30%;
-    margin-bottom: 0;
-}
+    &--copyright{
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
 
-.footer-rights{
-    display: block;
+    &-rights{
+        display: block;
+    }
 }
 
 
