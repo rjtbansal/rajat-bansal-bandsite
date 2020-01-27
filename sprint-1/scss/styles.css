@@ -199,6 +199,15 @@ h4, p {
   font-size: 1rem;
 }
 
+.footer__email--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__email--link:hover {
+  color: blue;
+}
+
 .footer--copyright {
   padding-bottom: 1rem;
   margin-bottom: 0;

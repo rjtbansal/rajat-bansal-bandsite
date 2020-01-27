@@ -188,6 +188,17 @@ h4,p {
         font-size: 1rem;
     }
 
+    //diving deeper: Email draft upon clicking of email link
+    &__email--link{
+        text-decoration: none;
+        color: inherit;
+
+        // to recognize clickable email upon hover
+        &:hover {
+            color: blue;
+        }
+    }
+
     &--copyright{
         padding-bottom: 1rem;
         margin-bottom: 0;
