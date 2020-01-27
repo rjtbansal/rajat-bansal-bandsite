@@ -319,6 +319,19 @@ h4, p {
   .nav {
     width: inherit;
   }
+  .header__logo {
+    margin-left: 10rem;
+  }
+  .main-background {
+    height: 41.875rem;
+  }
+  .main-background__heading {
+    margin-left: 8.5rem;
+    width: 40%;
+  }
+  .about {
+    padding-left: 10rem;
+  }
   .about__div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -331,23 +344,11 @@ h4, p {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header__logo {
-    margin-left: 10rem;
+  .about__image, .about__description {
+    width: 85%;
   }
-  .main-background {
-    height: 41.875rem;
-  }
-  .main-background__heading {
-    margin-left: 8.5rem;
-  }
-  .about, .photo-gallery {
+  .photo-gallery {
     padding-left: 10rem;
-  }
-  .about__image {
-    width: 85%;
-  }
-  .about__description {
-    width: 85%;
   }
   .footer__title, .footer--copyright {
     margin-left: 8rem;
