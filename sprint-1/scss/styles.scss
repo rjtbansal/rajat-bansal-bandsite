@@ -46,7 +46,6 @@ h4,p {
     @include set-font-properties(0.8125rem, 1.125rem)
 }
 
-
 .main-background{
     background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
     height: 20rem;
@@ -60,7 +59,6 @@ h4,p {
         padding-left: 1.5rem;
     }
 }
-
 
 .header {
     background-color: $header-footer-background;
@@ -82,7 +80,6 @@ h4,p {
         color: lightgreen;
     }
 }
-
 
 .nav {
     height: 3.5rem;
@@ -109,7 +106,6 @@ h4,p {
         color: lightgreen;
         font-size: 1.2em;
     }
-
     
 }
 
@@ -208,7 +204,6 @@ h4,p {
         display: block;
     }
 }
-
 
 @media screen and (min-width: $tablet-width) {
     h1 {
