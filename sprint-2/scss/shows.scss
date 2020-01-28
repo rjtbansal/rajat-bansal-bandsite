@@ -1,0 +1,21 @@
+$white-color: white;
+.shows-background{
+    background: url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+
+    &__heading--h1 {
+        margin-top: 0;
+        width: 70%;
+        // padding-left: 1.5rem;
+    }
+
+    &__heading--h2 {
+
+    }
+}

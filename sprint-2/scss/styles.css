@@ -81,9 +81,8 @@ h4, p {
 
 .header__logo:hover {
   cursor: pointer;
-  border-bottom: thick solid yellow;
+  border-bottom: thick solid white;
   padding-bottom: 1rem;
-  color: lightgreen;
 }
 
 .nav {
@@ -117,7 +116,6 @@ h4, p {
   cursor: pointer;
   padding-bottom: 1rem;
   color: lightgreen;
-  font-size: 1.2em;
 }
 
 .about {
