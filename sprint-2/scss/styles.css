@@ -1,0 +1,371 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Linotype';
+  src: url("../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Linotype-Bold';
+  src: url("../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Demi';
+  src: url("../../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+body {
+  margin: 0;
+  font-family: 'Linotype';
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Linotype-bold";
+}
+
+h2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "Demi";
+}
+
+h4, p {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: inherit;
+}
+
+.main-background {
+  background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-background__heading {
+  margin-top: 0;
+  color: #FFFFFF;
+  width: 70%;
+  padding-left: 1.5rem;
+}
+
+.header {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  padding-bottom: 1rem;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  border-bottom: thick solid yellow;
+  padding-bottom: 1rem;
+  color: lightgreen;
+}
+
+.nav {
+  height: 3.5rem;
+  width: 100%;
+}
+
+.nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: 4rem;
+  color: #E1E1E1;
+}
+
+.nav__item {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.nav__item--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__item:hover {
+  cursor: pointer;
+  padding-bottom: 1rem;
+  color: lightgreen;
+  font-size: 1.2em;
+}
+
+.about {
+  margin-left: 1rem;
+}
+
+.about__image {
+  width: 90%;
+}
+
+.about__quote, .about-musicians__names {
+  font-size: 1.5rem;
+  line-height: inherit;
+  font-family: "Demi";
+}
+
+.about__quote--author {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.about__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.photo-gallery {
+  margin-left: 1rem;
+  background-color: #FAFAFA;
+  padding-top: 0.5rem;
+}
+
+.photo-gallery__image {
+  width: 90%;
+  margin-bottom: 1rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.photo-gallery__image:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  color: #FFFFFF;
+  border-bottom: thick solid;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-left: 1rem;
+}
+
+.footer__title {
+  padding-top: 4rem;
+  font-size: 3rem;
+}
+
+.footer__icons {
+  padding-bottom: 1.5rem;
+}
+
+.footer__icon {
+  margin-right: 2rem;
+}
+
+.footer__bandsite--logo {
+  display: none;
+}
+
+.footer__contact--name {
+  font-size: 1rem;
+}
+
+.footer__email--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__email--link:hover {
+  color: blue;
+}
+
+.footer--copyright {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.footer-rights {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Linotype-Bold";
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-family: 'Demi';
+  }
+  h4, p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: inherit;
+  }
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header__logo {
+    margin-left: 1rem;
+  }
+  .nav {
+    width: inherit;
+  }
+  .nav__item {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-background {
+    height: 25rem;
+  }
+  .main-background__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: "Linotype-Bold";
+    width: 70%;
+  }
+  .about__quote, .about-musicians__names {
+    font-size: 1.8rem;
+    width: 85%;
+  }
+  .about__description {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about__description--para2 {
+    margin-left: 1rem;
+  }
+  .photo-gallery__image {
+    width: 30%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .footer__bandsite--logo {
+    display: block;
+  }
+  .footer--block1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer__title {
+    padding-top: 0;
+  }
+  .footer--info-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 95%;
+  }
+  .footer__icon {
+    padding-right: 1rem;
+    padding-top: 3rem;
+  }
+  .footer--copyright {
+    width: 100%;
+  }
+  .footer-rights {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    width: inherit;
+  }
+  .header__logo {
+    margin-left: 10rem;
+  }
+  .main-background {
+    height: 41.875rem;
+  }
+  .main-background__heading {
+    margin-left: 8.5rem;
+    width: 40%;
+  }
+  .about {
+    padding-left: 10rem;
+  }
+  .about__div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__image, .about__description {
+    width: 85%;
+  }
+  .photo-gallery {
+    padding-left: 10rem;
+  }
+  .footer__title, .footer--copyright {
+    margin-left: 8rem;
+  }
+  .footer--block1 {
+    width: 90%;
+  }
+  .footer--info-block {
+    width: 60%;
+    margin-left: 8rem;
+  }
+  .footer__icons {
+    margin-right: 30rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
