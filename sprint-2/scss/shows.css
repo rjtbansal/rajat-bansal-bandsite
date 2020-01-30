@@ -1,13 +1,9 @@
 .shows-background {
   background: url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
   height: 35rem;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -29,5 +25,56 @@
 .shows-background__heading--h2 {
   padding-top: 4rem;
   font-size: inherit;
+}
+
+.shows {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.shows__title {
+  font-size: 25px;
+  font-family: 'Linotype-Bold';
+}
+
+.shows__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.show__date--heading {
+  color: #AFAFAF;
+}
+
+.show__venue--heading {
+  color: #AFAFAF;
+}
+
+.show__venue--value {
+  font-weight: normal;
+}
+
+.show__location--heading {
+  color: #AFAFAF;
+}
+
+.show__location--value {
+  font-weight: normal;
+}
+
+.show__button {
+  margin-bottom: 1rem;
+  background-color: #323232;
+  color: white;
+  text-transform: uppercase;
+  width: 95%;
+  height: 48px;
+  border-radius: 5px;
+  border-style: none;
 }
 /*# sourceMappingURL=shows.css.map */

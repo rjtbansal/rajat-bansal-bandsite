@@ -53,6 +53,7 @@ function createShowItem(showDate, showVenue, showLocation){
 
     //buy tickets button
     const buyTicketsButton = document.createElement('button');
+    buyTicketsButton.className = 'show__button';
     buyTicketsButton.textContent = 'Buy Tickets';
     showDiv.appendChild(buyTicketsButton);
 
@@ -60,7 +61,6 @@ function createShowItem(showDate, showVenue, showLocation){
     const borderDiv = document.createElement('div');
     borderDiv.className = 'show__border';
     borderDiv.style.borderBottom = '1px solid lightgray';
-
     showDiv.appendChild(borderDiv);
 
     const showsListDiv = document.querySelector('.shows__list');
