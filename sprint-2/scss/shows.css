@@ -29,7 +29,11 @@
 
 @media screen and (min-width: 768px) {
   .shows-background {
-    height: 670px;
+    height: 37.5rem;
+    padding-left: 2rem;
+  }
+  .shows-background__heading--h1 {
+    width: 60%;
   }
   .shows-background__heading--h2 {
     padding-top: 6rem;
@@ -54,6 +58,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.shows__list--headings {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .shows {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .shows__list--headings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 60%;
+  }
 }
 
 .show__date--heading {
@@ -85,5 +109,25 @@
   height: 3rem;
   border-radius: 5px;
   border-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .show__heading--visibility {
+    display: none;
+  }
+  .show__button {
+    width: 20%;
+  }
+  .show__date, .show__venue, .show__location {
+    width: 25%;
+  }
 }
 /*# sourceMappingURL=shows.css.map */

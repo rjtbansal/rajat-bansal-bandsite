@@ -22,7 +22,11 @@
     }
 
     @media screen and (min-width: $tablet-width) {
-        height: 670px;
+        height: 37.5rem;
+        padding-left: 2rem;
+        &__heading--h1 {
+            width: 60%;
+        }
 
         &__heading--h2 {
             padding-top: 6rem;
@@ -43,6 +47,24 @@
     &__list{
         display: flex;
         flex-direction: column;
+
+        &--headings{
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        &__list {
+
+            &--headings {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+            }
+        }
     }
 }
 
@@ -78,6 +100,24 @@
         height: 3rem;
         border-radius: 5px;
         border-style: none;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        
+        display: flex;
+        justify-content: space-between;
+
+        &__heading--visibility {
+            display: none;
+        }
+
+        &__button {
+            width: 20%;
+        }
+
+        &__date , &__venue, &__location{
+            width: 25%;
+        }
     }
 
     //continue styling each show component

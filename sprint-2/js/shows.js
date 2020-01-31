@@ -1,4 +1,4 @@
-function createShowItem(showDate, showVenue, showLocation){
+const createShowItem = (showDate, showVenue, showLocation) => {
     
     const showDiv = document.createElement('div');
     showDiv.className = 'show';
@@ -9,7 +9,8 @@ function createShowItem(showDate, showVenue, showLocation){
 
     const showDateHeadingH4 = document.createElement('h4');
     showDateHeadingH4.textContent = 'DATE';
-    showDateHeadingH4.className = 'show__date--heading';
+    // showDateHeadingH4.className = 'show__date--heading';
+    showDateHeadingH4.classList.add('show__date--heading', 'show__heading--visibility')
 
     const showDateValueH4 = document.createElement('h4');
     showDateValueH4.textContent = showDate;
@@ -25,7 +26,7 @@ function createShowItem(showDate, showVenue, showLocation){
 
     const showVenueHeadingH4 = document.createElement('h4');
     showVenueHeadingH4.textContent = 'VENUE';
-    showVenueHeadingH4.className = 'show__venue--heading';
+    showVenueHeadingH4.classList.add('show__venue--heading', 'show__heading--visibility');
 
     const showVenueValueH4 = document.createElement('h4');
     showVenueValueH4.textContent = showVenue;
@@ -41,7 +42,7 @@ function createShowItem(showDate, showVenue, showLocation){
 
     const showLocationHeadingH4 = document.createElement('h4');
     showLocationHeadingH4.textContent = 'LOCATION';
-    showLocationHeadingH4.className = 'show__location--heading';
+    showLocationHeadingH4.classList.add('show__location--heading' ,'show__heading--visibility')
 
     const showLocationValueH4 = document.createElement('h4');
     showLocationValueH4.textContent = showLocation;
@@ -67,12 +68,42 @@ function createShowItem(showDate, showVenue, showLocation){
     showsListDiv.appendChild(showDiv);
 }
 
+const createShowHeadings = () => {
+    const showsListHeadingDiv = document.createElement('div');
+    showsListHeadingDiv.className = 'shows__list--headings';
+
+    const showDateHeadingH4 = document.createElement('h4');
+    showDateHeadingH4.className = "show__date--heading";
+    showDateHeadingH4.textContent = 'DATES';
+
+    const showVenueHeadingH4 = document.createElement('h4');
+    showVenueHeadingH4.className = "show__venue--heading";
+    showVenueHeadingH4.textContent = 'VENUE';
+
+    const showLocationHeadingH4 = document.createElement('h4');
+    showLocationHeadingH4.className = "show__location--heading";
+    showLocationHeadingH4.textContent = 'LOCATION';
+
+    showsListHeadingDiv.appendChild(showDateHeadingH4);
+    showsListHeadingDiv.appendChild(showVenueHeadingH4);
+    showsListHeadingDiv.appendChild(showLocationHeadingH4);
+
+    const showsListDiv = document.querySelector('.shows__list');
+    //inserting as first child of showsListDiv
+    showsListDiv.insertBefore(showsListHeadingDiv, showsListDiv.childNodes[0]);
+
+}
+
+//change it to array of objects
+
 createShowItem('Mon Dec 17 2018','Ronald Lane', 'San Francisco, CA');
 createShowItem('Tue Jul 18 2019', 'Pier 3 East', 'San Francisco, CA');
 createShowItem('Fri Jul 22 2019', 'View Loungue', 'San Francisco, CA');
 createShowItem('Sat Aug 12 2019', 'Hyatt Agency', 'San Francisco, CA');
 createShowItem('Fri Sep 05 2019', 'Moscow Center', 'San Francisco, CA');
 createShowItem('Wed Aug 11 2019', 'Pres Club', 'San Francisco, CA');
+
+createShowHeadings();
 
 
 
