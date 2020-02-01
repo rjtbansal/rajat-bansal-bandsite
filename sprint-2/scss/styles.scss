@@ -157,6 +157,41 @@ h4,p {
     padding-bottom: 1rem;
 }
 
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__section{
+        display: flex;
+    }
+}
+.form {
+
+    &__field--label{
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    &__div {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.author-image{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    margin-right: 1.5rem;
+}
+
+.comment-author__image {
+    border-radius: 5rem;
+    width: 4rem;
+    height: 4rem;
+    background: gray;
+}
+
 .footer {
     background-color: $header-footer-background;
     color: $white-text;

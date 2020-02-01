@@ -94,7 +94,9 @@ const createShowHeadings = () => {
 
 }
 
+//pending items:
 //change it to array of objects
+//add bottom border for each row in tab and desk mode
 
 createShowItem('Mon Dec 17 2018','Ronald Lane', 'San Francisco, CA');
 createShowItem('Tue Jul 18 2019', 'Pier 3 East', 'San Francisco, CA');

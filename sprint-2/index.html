@@ -74,12 +74,36 @@
             <img class="photo-gallery__image" src="../Assets/Images/Photo-gallery-8.jpg" alt="Photo 8">
             <img class="photo-gallery__image" src="../Assets/Images/Photo-gallery-9.jpg" alt="Photo 9">
         </section>
+
+        <section class="comments">
+            <h1 class="comments__title">Join the Conversation</h1>
+            <!-- have an image here then add a div to seperate form and image so that it can be aligned
+            with flexbox -->
+            <div class="comments__section">
+                <img class="author-image" src="../Assets/Images/Mohan-muruge.jpg" alt="mohan-muruge-image">
+                <form action="" class="form">
+                    <div class="form__div">
+                        <label for="name" class="form__field--label">NAME</label>
+                        <input type="text" name="name" class="form__field--name">
+                    </div>
+                    <div class="form__div">
+                        <label for="comment" class="form__field--label">COMMENT</label>
+                        <textarea name="comment" class="form__field--comment" id="comment" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="form__div">
+                        <button class="form__submit-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="comments__displayed">
+
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <section class="footer--block1">
             <h1 class="footer__title">Get In Touch</h1>
-            
             <div class="footer__icons">
                 <img class="footer__icon" src="../Assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon">
                 <img class="footer__icon" src="../Assets/Icons/SVG/Icon-facebook.svg" alt="facebook icon">
@@ -127,5 +151,6 @@
         </div>
         <h4 class="footer--copyright">Copyright The Bees Knees © 2018 <span class="footer-rights">All Rights Reserved</span></All></h4>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
