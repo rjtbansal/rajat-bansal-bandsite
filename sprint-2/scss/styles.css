@@ -196,10 +196,45 @@ h4, p {
 .form__field--label {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #AFAFAF;
+}
+
+.form__field--name {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+.form__field--name:focus {
+  border: 2px solid black;
+}
+
+.form__field--comment {
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  resize: none;
+}
+
+.form__field--comment:focus {
+  border: 2px solid black;
 }
 
 .form__div {
   margin-bottom: 1.5rem;
+}
+
+.form__submit-button {
+  background-color: #323232;
+  color: white;
+  text-transform: uppercase;
+  height: 3rem;
+  width: 100%;
+  border-radius: 5px;
+  border-style: none;
 }
 
 .author-image {

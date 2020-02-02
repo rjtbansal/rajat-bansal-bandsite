@@ -1,5 +1,6 @@
-$header-footer-background: #323232;
 @import 'variables';
+$header-footer-background: #323232;
+
 
 * {
     box-sizing: border-box;
@@ -168,13 +169,49 @@ h4,p {
 }
 .form {
 
-    &__field--label{
-        display: block;
-        margin-bottom: 0.5rem;
+    &__field{
+
+        &--label{
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+            color: #AFAFAF;
+        }
+
+        &--name {
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+            &:focus {
+                border: 2px solid black; 
+            }
+        }
+
+        &--comment{
+            outline: none;
+            border-radius: 5px;
+            width: 100%;
+            resize: none;
+            &:focus {
+                border: 2px solid black; 
+            }
+        }
     }
 
     &__div {
         margin-bottom: 1.5rem;
+    }
+
+    &__submit-button {
+        background-color: $shows-button-background-color;
+        color: $white-color;
+        text-transform: uppercase;
+        height: 3rem;
+        width: 100%;
+        border-radius: 5px;
+        border-style: none;
     }
 }
 
@@ -191,6 +228,13 @@ h4,p {
     height: 4rem;
     background: gray;
 }
+
+// .form{
+//     &__field--label {
+//         color: ;
+       
+//     }
+// }
 
 .footer {
     background-color: $header-footer-background;
