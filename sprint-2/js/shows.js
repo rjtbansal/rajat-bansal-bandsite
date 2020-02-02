@@ -1,3 +1,36 @@
+const shows = [
+    {
+        timestamp: 'Mon Dec 17 2018',
+        venue: 'Ronald Lane',
+        location: 'San Francisco, CA'
+    },
+    {
+        timestamp: 'Tue Jul 18 2019',
+        venue: 'Pier 3 East',
+        location: 'San Francisco, CA'
+    },
+    {
+        timestamp: 'Fri Jul 22 2019',
+        venue: 'View Loungue',
+        location: 'San Francisco, CA'
+    },
+    {
+        timestamp: 'Sat Aug 12 2019',
+        venue: 'Hyatt Agency',
+        location: 'San Francisco, CA'
+    },
+    {
+        timestamp: 'Fri Sep 05 2019', 
+        venue: 'Moscow Center', 
+        location: 'San Francisco, CA'
+    },
+    {
+        timestamp: 'Wed Aug 11 2019', 
+        venue: 'Pres Club', 
+        location: 'San Francisco, CA'
+    }
+];
+
 const createShowItem = (showDate, showVenue, showLocation) => {
     
     const showDiv = document.createElement('div');
@@ -61,11 +94,12 @@ const createShowItem = (showDate, showVenue, showLocation) => {
     //bottom border
     const borderDiv = document.createElement('div');
     borderDiv.className = 'show__border';
-    borderDiv.style.borderBottom = '1px solid lightgray';
-    showDiv.appendChild(borderDiv);
+    borderDiv.style.borderBottom = '2px solid lightgray';
+    borderDiv.style.marginBottom = '1rem';
 
     const showsListDiv = document.querySelector('.shows__list');
     showsListDiv.appendChild(showDiv);
+    showsListDiv.appendChild(borderDiv);
 }
 
 const createShowHeadings = () => {
@@ -95,16 +129,11 @@ const createShowHeadings = () => {
 }
 
 //pending items:
-//change it to array of objects
 //add bottom border for each row in tab and desk mode
 
-createShowItem('Mon Dec 17 2018','Ronald Lane', 'San Francisco, CA');
-createShowItem('Tue Jul 18 2019', 'Pier 3 East', 'San Francisco, CA');
-createShowItem('Fri Jul 22 2019', 'View Loungue', 'San Francisco, CA');
-createShowItem('Sat Aug 12 2019', 'Hyatt Agency', 'San Francisco, CA');
-createShowItem('Fri Sep 05 2019', 'Moscow Center', 'San Francisco, CA');
-createShowItem('Wed Aug 11 2019', 'Pres Club', 'San Francisco, CA');
-
+shows.forEach(show => {
+    createShowItem(show.timestamp, show.venue, show.location);
+});
 createShowHeadings();
 
 
