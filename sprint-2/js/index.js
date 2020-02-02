@@ -29,6 +29,9 @@ const commentsObj = [
 ];
 
 const displayComment = commentObj => {
+
+    const childDiv = document.createElement('div');
+    childDiv.className = 'comments__subdiv';
     
     const imagePlaceHolderDiv = document.createElement('div');
     imagePlaceHolderDiv.className = 'comment-author__image';
@@ -45,12 +48,18 @@ const displayComment = commentObj => {
     commentTextP.className = 'comment-text';
     commentTextP.textContent = commentObj.comment;
 
+    const borderDiv = document.createElement('div');
+    borderDiv.className = 'show__border';
+    borderDiv.style.borderBottom = '2px solid lightgray';
+    borderDiv.style.marginBottom = '1rem';
 
     const commentsDisplayedDiv = document.querySelector('.comments__displayed');
-    commentsDisplayedDiv.appendChild(imagePlaceHolderDiv);
-    commentsDisplayedDiv.appendChild(commentAuthorNameH4);
-    commentsDisplayedDiv.appendChild(commentDateH4);
+    commentsDisplayedDiv.appendChild(childDiv);
+    childDiv.appendChild(imagePlaceHolderDiv);
+    childDiv.appendChild(commentAuthorNameH4);
+    childDiv.appendChild(commentDateH4);
     commentsDisplayedDiv.appendChild(commentTextP);
+    commentsDisplayedDiv.appendChild(borderDiv)
 }
 
 commentsObj.forEach(commentObj => {

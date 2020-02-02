@@ -174,25 +174,6 @@ h4, p {
   padding-bottom: 1rem;
 }
 
-.comments {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.comments__section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .form__field--label {
   display: block;
   margin-bottom: 0.5rem;
@@ -237,6 +218,42 @@ h4, p {
   border-style: none;
 }
 
+.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.comments__subdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comments__displayed {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-top: 2px solid lightgray;
+  padding-top: 1rem;
+}
+
 .author-image {
   width: 5rem;
   height: 5rem;
@@ -245,10 +262,25 @@ h4, p {
 }
 
 .comment-author__image {
-  border-radius: 5rem;
-  width: 4rem;
-  height: 4rem;
-  background: gray;
+  border-radius: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: #E1E1E1;
+}
+
+.comment-author__name {
+  position: absolute;
+  left: 6rem;
+}
+
+.comment-text {
+  margin-left: 4rem;
+  margin-top: 0;
+}
+
+.comment-date {
+  color: #AFAFAF;
+  font-weight: normal;
 }
 
 .footer {
