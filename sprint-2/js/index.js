@@ -56,3 +56,37 @@ const displayComment = commentObj => {
 commentsObj.forEach(commentObj => {
     displayComment(commentObj);
 });
+
+const generateTodaysDate = () => {
+    const today = new Date();
+    return `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
+}
+
+const form = document.querySelector('#comment_form');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const userCommentObj = {};
+
+    userCommentObj.name = e.target.name.value;
+
+    //generating today's date
+    const currentDate = generateTodaysDate();
+    userCommentObj.timestamp = currentDate;
+    userCommentObj.comment = e.target.comment.value;
+    commentsObj.unshift(userCommentObj);
+
+    //clearing form fields
+    form.reset();
+    
+    //clearing all comments from page
+    const commentsDisplayedDiv = document.querySelector('.comments__displayed');
+    while(commentsDisplayedDiv.firstChild) {
+        commentsDisplayedDiv.removeChild(commentsDisplayedDiv.firstChild);
+    }
+
+    //display all comments 
+    commentsObj.forEach(commentObj => {
+        displayComment(commentObj);
+    });
+
+});

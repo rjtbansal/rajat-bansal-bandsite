@@ -81,17 +81,17 @@
             with flexbox -->
             <div class="comments__section">
                 <img class="author-image" src="../Assets/Images/Mohan-muruge.jpg" alt="mohan-muruge-image">
-                <form action="" class="form">
+                <form id="comment_form" action="" class="form">
                     <div class="form__div">
                         <label for="name" class="form__field--label">NAME</label>
-                        <input type="text" name="name" class="form__field--name">
+                        <input type="text" name="name" class="form__field--name" required>
                     </div>
                     <div class="form__div">
                         <label for="comment" class="form__field--label">COMMENT</label>
-                        <textarea name="comment" class="form__field--comment" id="comment" cols="30" rows="5"></textarea>
+                        <textarea name="comment" class="form__field--comment" id="comment" cols="30" rows="5" required></textarea>
                     </div>
                     <div class="form__div">
-                        <button class="form__submit-button">Submit</button>
+                        <button id="submit" type="submit" class="form__submit-button">Submit</button>
                     </div>
                 </form>
             </div>
