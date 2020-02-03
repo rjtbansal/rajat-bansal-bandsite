@@ -211,7 +211,8 @@ h4,p {
         width: 100%;
 
         &__submit-button{
-            width: 10rem;;
+            width: 10rem;
+            float: right;
         }
     }
 }
@@ -250,11 +251,32 @@ h4,p {
         }
 
         &__subdiv {
-            // width: 40%;
             justify-content: flex-start;
+        }
+
+        &__title {
+            align-self: flex-start;
+            margin-left: 1rem;
         }
         
     }
+
+    @media screen and (min-width: $desktop-width){
+        &__section{
+            width: 50%;
+        }
+
+        &__displayed {
+            width: 50%;
+        }
+
+        &__title {
+            margin-left: 10rem;
+        }
+
+    }
+
+    
 }
 
 .author-image{

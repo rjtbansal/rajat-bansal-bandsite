@@ -225,6 +225,7 @@ h4, p {
   }
   .form__submit-button {
     width: 10rem;
+    float: right;
   }
 }
 
@@ -277,6 +278,23 @@ h4, p {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .comments__title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments__section {
+    width: 50%;
+  }
+  .comments__displayed {
+    width: 50%;
+  }
+  .comments__title {
+    margin-left: 10rem;
   }
 }
 
