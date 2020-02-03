@@ -37,6 +37,19 @@
             width: 50%;
         }
     }
+
+    @media screen and (min-width: $desktop-width) {
+        flex-direction: row;
+        align-items: center;
+        
+        &__headings{
+            padding-left: 8rem;
+        }
+
+        &__music {
+            padding-right: 5rem;
+        }
+    }
 }
 
 .shows {
@@ -59,8 +72,11 @@
     }
 
     @media screen and (min-width: $tablet-width) {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding: 2rem 2rem 0 2rem;
+
+        &__title {
+            font-size: 2rem;
+        }
 
         &__list {
 
@@ -72,6 +88,18 @@
         }
 
     }
+
+    @media screen and (min-width: $desktop-width) {
+
+        display: flex;
+        justify-content: space-around;
+
+        &__list {
+            width: 60%;
+        }
+    }
+
+
 }
 
 .show {
@@ -106,7 +134,7 @@
         height: 3rem;
         border-radius: 5px;
         border-style: none;
-        font-size: 1rem;
+       
     }
 
     @media screen and (min-width: $tablet-width) {
