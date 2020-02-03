@@ -58,8 +58,13 @@
   .shows-background__headings {
     padding-left: 8rem;
   }
+  .shows-background__heading--h1 {
+    width: 30rem;
+  }
   .shows-background__music {
-    padding-right: 5rem;
+    width: 30rem;
+    margin-top: 6.5rem;
+    margin-left: 5rem;
   }
 }
 
