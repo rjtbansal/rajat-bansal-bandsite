@@ -1,7 +1,7 @@
 @import 'variables';
 
 .shows-background{
-    background: url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
+    background: linear-gradient(rgba(0,0,0,0.50)), url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
     height: 35rem;
     color: $white-color;
     display: flex;
@@ -18,18 +18,23 @@
 
     &__heading--h2 {
         padding-top: 4rem;
-        font-size: inherit;
+        font-size: 1.5rem;
     }
 
     @media screen and (min-width: $tablet-width) {
-        height: 37.5rem;
+        height: 39rem;
         padding-left: 2rem;
         &__heading--h1 {
             width: 60%;
+            font-size: 3rem;
         }
 
         &__heading--h2 {
             padding-top: 6rem;
+        }
+
+        &__music {
+            width: 50%;
         }
     }
 }
@@ -65,6 +70,7 @@
                 width: 60%;
             }
         }
+
     }
 }
 

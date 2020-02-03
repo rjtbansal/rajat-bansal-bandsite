@@ -44,7 +44,7 @@ h4,p {
 }
 
 .main-background{
-    background: url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
+    background: linear-gradient(rgba(0,0,0,0.50)), url(../../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
     height: 20rem;
     display: flex;
     align-items: center;

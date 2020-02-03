@@ -1,5 +1,6 @@
 .shows-background {
-  background: url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url(../../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
   height: 35rem;
   color: white;
   display: -webkit-box;
@@ -24,19 +25,23 @@
 
 .shows-background__heading--h2 {
   padding-top: 4rem;
-  font-size: inherit;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
   .shows-background {
-    height: 37.5rem;
+    height: 39rem;
     padding-left: 2rem;
   }
   .shows-background__heading--h1 {
     width: 60%;
+    font-size: 3rem;
   }
   .shows-background__heading--h2 {
     padding-top: 6rem;
+  }
+  .shows-background__music {
+    width: 50%;
   }
 }
 
