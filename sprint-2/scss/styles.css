@@ -219,6 +219,15 @@ h4, p {
   border-style: none;
 }
 
+@media screen and (min-width: 768px) {
+  .form {
+    width: 100%;
+  }
+  .form__submit-button {
+    width: 10rem;
+  }
+}
+
 .comments {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,11 +264,28 @@ h4, p {
   padding-top: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__section {
+    width: 80%;
+  }
+  .comments__displayed {
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
+  }
+  .comments__subdiv {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .author-image {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 5rem;
-  margin-right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
 }
 
 .comment-author__image {
@@ -272,6 +298,16 @@ h4, p {
 .comment-author__name {
   position: absolute;
   left: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .comment-author__name {
+    position: static;
+    margin-right: 1rem;
+  }
+  .comment-author__image {
+    margin-right: 1rem;
+  }
 }
 
 .comment-text {

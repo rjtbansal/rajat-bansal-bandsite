@@ -206,6 +206,14 @@ h4,p {
         border-radius: 5px;
         border-style: none;
     }
+
+    @media screen and (min-width: $tablet-width) {
+        width: 100%;
+
+        &__submit-button{
+            width: 10rem;;
+        }
+    }
 }
 
 .comments {
@@ -229,13 +237,32 @@ h4,p {
         border-top: 2px solid lightgray;
         padding-top: 1rem;
     }
+
+    @media screen and (min-width: $tablet-width){
+        &__section{
+            width: 80%;
+        }
+
+        &__displayed {
+            margin-left: 0;
+            margin-right: 0;
+            width: 80%;
+        }
+
+        &__subdiv {
+            // width: 40%;
+            justify-content: flex-start;
+        }
+        
+    }
 }
 
 .author-image{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 5rem;
-    margin-right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
 }
 
 .comment-author {
@@ -251,6 +278,20 @@ h4,p {
         position: absolute;
         left: 6rem;
     }
+
+    @media screen and (min-width: $tablet-width){
+
+        &__name {
+            position: static;
+            margin-right: 1rem;
+        }
+
+        &__image {
+            margin-right: 1rem;
+        }
+    }
+
+
 }
 
 .comment-text {
