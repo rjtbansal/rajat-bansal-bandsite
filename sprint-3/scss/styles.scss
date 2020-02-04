@@ -1,0 +1,534 @@
+@import 'variables';
+$header-footer-background: #323232;
+
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Linotype';
+    src: url('../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Linotype-Bold';
+    src: url('../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Demi';
+    src: url('../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf');
+}
+
+@mixin set-font-properties($font-size, $line-height:inherit, $font-family:inherit) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-family;
+}
+body {
+    margin: 0;
+    font-family: 'Linotype';
+}
+
+h1 {
+    @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
+}
+
+h2 {
+    @include set-font-properties(0.875rem, 1.375rem, 'Demi');
+}
+
+h4,p {
+    @include set-font-properties(0.8125rem, 1.125rem)
+}
+
+.main-background{
+    background: linear-gradient(rgba(0,0,0,0.50)), url(../Assets/Images/hero-image.jpg) left 10% bottom 42%/cover no-repeat border-box;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+
+    &__heading {
+        margin-top: 0;
+        color: $white-text;
+        width: 70%;
+        padding-left: 1.5rem;
+    }
+}
+
+.header {
+    background-color: $header-footer-background;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    color: $white-text;
+    align-items: center;
+
+    &__logo {
+        padding-bottom: 1rem;
+    }
+
+    //diving deeper: hover effect on clickable Logo
+    &__logo:hover {
+        cursor: pointer;
+        border-bottom: thick solid white;
+        padding-bottom: 1rem;
+    }
+}
+
+.nav {
+    height: 3.5rem;
+    width: 100%;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 4rem;
+        color: #E1E1E1;
+    }
+
+    &__item {
+        padding-left: 25%;
+        padding-right: 25%;
+
+        &--link{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    // diving deeper: hover effect on each nav item
+    &__item:hover {
+        cursor: pointer;
+        padding-bottom: 1rem;
+        color: lightgreen;
+        // font-size: 1.2em;
+    }
+    
+}
+
+.about {
+    margin-left: 1rem;
+
+    &__image {
+        width: 90%;
+    }
+
+    &__quote, &-musicians__names {
+        @include set-font-properties(1.5rem, inherit, 'Demi');
+    }
+
+    &__quote--author {
+        display: block;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.photo-gallery{
+    margin-left: 1rem;
+    background-color: #FAFAFA;
+    padding-top: 0.5rem;
+
+    &__image{
+        width: 90%;
+        margin-bottom: 1rem;
+        //diving deeper: grayscale image by default
+        filter: grayscale(100%);
+    }
+
+    //diving deeper: grayscale image converts to color on hover
+    &__image:hover {
+        filter: grayscale(0);
+        cursor: pointer;
+    }
+}
+
+.active {
+    font-weight: bold;
+    color: $white-text;
+    border-bottom: thick solid;
+    padding-bottom: 1rem;
+}
+
+
+
+.form {
+
+    &__field{
+
+        &--label{
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+            color: #AFAFAF;
+        }
+
+        &--name {
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+            &:focus {
+                border: 2px solid black; 
+            }
+        }
+
+        &--comment{
+            outline: none;
+            border-radius: 5px;
+            width: 100%;
+            resize: none;
+            &:focus {
+                border: 2px solid black; 
+            }
+        }
+    }
+
+    &__div {
+        margin-bottom: 1.5rem;
+    }
+
+    &__submit-button {
+        background-color: $shows-button-background-color;
+        color: $white-color;
+        text-transform: uppercase;
+        height: 3rem;
+        width: 100%;
+        border-radius: 5px;
+        border-style: none;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        width: 100%;
+
+        &__submit-button{
+            width: 10rem;
+            float: right;
+        }
+    }
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__section{
+        display: flex;
+        margin-bottom: 0.8rem;
+    }
+
+    &__subdiv {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__displayed {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-top: 2px solid lightgray;
+        padding-top: 1rem;
+    }
+
+    @media screen and (min-width: $tablet-width){
+        &__section{
+            width: 80%;
+        }
+
+        &__displayed {
+            margin-left: 0;
+            margin-right: 0;
+            width: 80%;
+        }
+
+        &__subdiv {
+            justify-content: flex-start;
+        }
+
+        &__title {
+            align-self: flex-start;
+            margin-left: 1rem;
+        }
+        
+    }
+
+    @media screen and (min-width: $desktop-width){
+        &__section{
+            width: 50%;
+        }
+
+        &__displayed {
+            width: 50%;
+        }
+
+        &__title {
+            margin-left: 10rem;
+        }
+
+    }
+
+    
+}
+
+.author-image{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.comment-author {
+
+    &__image{
+        border-radius: 3rem;
+        width: 3rem;
+        height: 3rem;
+        background: #E1E1E1;
+    }
+
+    &__name {
+        position: absolute;
+        left: 6rem;
+    }
+
+    @media screen and (min-width: $tablet-width){
+
+        &__name {
+            position: static;
+            margin-right: 1rem;
+        }
+
+        &__image {
+            margin-right: 1rem;
+        }
+    }
+
+
+}
+
+.comment-text {
+    margin-left: 4rem;
+    margin-top: 0;
+}
+
+.comment-date {
+    color: #AFAFAF;
+    font-weight: normal;
+}
+
+.footer {
+    background-color: $header-footer-background;
+    color: $white-text;
+    padding-left: 1rem;
+
+    &__title {
+        padding-top: 4rem;
+        font-size: 3rem;
+    }
+
+    &__icons {
+        padding-bottom: 1.5rem;
+    }
+
+    &__icon {
+        margin-right: 2rem;
+    }
+
+    &__bandsite--logo{
+        display: none;
+    }
+
+    &__contact--name{
+        font-size: 1rem;
+    }
+
+    //diving deeper: Email draft upon clicking of email link
+    &__email--link{
+        text-decoration: none;
+        color: inherit;
+
+        // to recognize clickable email upon hover
+        &:hover {
+            color: blue;
+        }
+    }
+
+    &--copyright{
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    &-rights{
+        display: block;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    h1 {
+        @include set-font-properties(2.25rem, 2.75rem, 'Linotype-Bold');
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        font-family: 'Demi';
+    }
+    
+    h4,p {
+        @include set-font-properties(0.875rem, 1.375rem)
+    }
+
+
+    .header {
+        flex-direction: row;
+
+        &__logo {
+            margin-left: 1rem;
+        }
+    }
+
+    .nav {
+        width: inherit;
+
+        &__item {
+            margin-left: 1rem;
+            margin-right: 2rem;
+            
+            //required to control space between nav items and reduce bottom border in tab mode 
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .main-background {
+        height: 25rem;
+
+        &__heading {
+            @include set-font-properties(3.75rem, 4.25rem, 'Linotype-Bold');
+            width: 70%;
+        }
+    }
+
+    .about {
+        &__quote, &-musicians__names {
+            font-size: 1.8rem;
+            width: 85%;
+        }
+
+        &__description{
+            flex-direction: row;
+        }
+
+        &__description--para2{
+            margin-left: 1rem;
+        }
+    }
+
+    .photo-gallery__image{
+        width: 30%;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+
+    .footer {
+        &__bandsite--logo {
+            display: block;
+        }
+
+        &--block1{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        &__title {
+            padding-top: 0;
+        }
+
+        &--info-block{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+        }
+
+        &__icon {
+            padding-right: 1rem;
+            padding-top: 3rem;
+        }
+
+        &-rights{
+            display: inline;
+        }
+    }    
+}
+
+@media screen and (min-width: $desktop-width) {
+
+    // required so that nav items dont take entire space
+    .nav {
+        width: inherit;
+    }
+
+    .header__logo {
+        margin-left: 10rem;
+    }
+
+    .main-background {
+        height: 41.875rem;
+        &__heading{
+            margin-left: 8.5rem;
+            width: 40%;
+        }
+    }
+
+    .about {
+        padding-left: 10rem;
+
+        &__div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__image, &__description {
+            width: 85%;
+        }
+    }
+    
+    .photo-gallery{
+        padding-left: 10rem;
+    }
+
+    .footer {
+        &__title, &--copyright{
+            margin-left: 8rem;
+        }
+
+        &--block1 {
+            width: 90%;
+        }
+
+        &--info-block{
+            width: 60%;
+            margin-left: 8rem;
+        }
+
+        &__icons {
+            margin-right: 30rem;
+        }
+    }
+
+}
+
+
