@@ -124,7 +124,7 @@ h4, p {
 }
 
 .about__image {
-  width: 90%;
+  width: 95%;
 }
 
 .about__quote, .about-musicians__names {
@@ -150,9 +150,45 @@ h4, p {
 }
 
 .photo-gallery {
-  margin-left: 1rem;
   background-color: #FAFAFA;
   padding-top: 0.5rem;
+}
+
+.photo-gallery__title {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .photo-gallery__title {
+    margin-left: 8rem;
+  }
+}
+
+.photo-gallery__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .photo-gallery__images {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .photo-gallery__image {
@@ -492,9 +528,6 @@ h4, p {
     margin-left: 8.5rem;
     width: 40%;
   }
-  .about {
-    padding-left: 10rem;
-  }
   .about__div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -508,10 +541,16 @@ h4, p {
             align-items: center;
   }
   .about__image, .about__description {
-    width: 85%;
+    width: 75%;
   }
-  .photo-gallery {
-    padding-left: 10rem;
+  .about__title {
+    margin-left: 8.5rem;
+  }
+  .about__quote, .about-musicians__names {
+    width: 75%;
+  }
+  .photo-gallery__image {
+    width: 25%;
   }
   .footer__title, .footer--copyright {
     margin-left: 8rem;
