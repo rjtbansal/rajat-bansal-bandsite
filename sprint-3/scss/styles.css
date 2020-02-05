@@ -29,16 +29,39 @@ h1 {
   font-family: "Linotype-bold";
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Linotype-Bold";
+  }
+}
+
 h2 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Demi";
 }
 
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    font-family: 'Demi';
+  }
+}
+
 h4, p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  h4, p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: inherit;
+  }
 }
 
 .main-background {
@@ -58,6 +81,34 @@ h4, p {
   color: #FFFFFF;
   width: 70%;
   padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-background__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: "Linotype-Bold";
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-background__heading {
+    margin-left: 8.5rem;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-background {
+    height: 25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-background {
+    height: 41.875rem;
+  }
 }
 
 .header {
@@ -80,10 +131,31 @@ h4, p {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-left: 10rem;
+  }
+}
+
 .header__logo:hover {
   cursor: pointer;
   border-bottom: thick solid white;
   padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .nav {
@@ -113,10 +185,25 @@ h4, p {
   color: inherit;
 }
 
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .nav__item:hover {
   cursor: pointer;
   padding-bottom: 1rem;
   color: lightgreen;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    width: inherit;
+  }
 }
 
 .about {
@@ -127,10 +214,29 @@ h4, p {
   width: 95%;
 }
 
+@media screen and (min-width: 1200px) {
+  .about__image {
+    width: 75%;
+  }
+}
+
 .about__quote, .about-musicians__names {
   font-size: 1.5rem;
   line-height: inherit;
   font-family: "Demi";
+}
+
+@media screen and (min-width: 768px) {
+  .about__quote, .about-musicians__names {
+    font-size: 1.8rem;
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__quote, .about-musicians__names {
+    width: 75%;
+  }
 }
 
 .about__quote--author {
@@ -147,6 +253,42 @@ h4, p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .about__description {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about__description--para2 {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__description {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    margin-left: 8.5rem;
+  }
 }
 
 .photo-gallery {
@@ -196,6 +338,20 @@ h4, p {
   margin-bottom: 1rem;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+@media screen and (min-width: 768px) {
+  .photo-gallery__image {
+    width: 30%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photo-gallery__image {
+    width: 25%;
+  }
 }
 
 .photo-gallery__image:hover {
@@ -256,12 +412,15 @@ h4, p {
 }
 
 @media screen and (min-width: 768px) {
-  .form {
-    width: 100%;
-  }
   .form__submit-button {
     width: 10rem;
     float: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 100%;
   }
 }
 
@@ -420,65 +579,6 @@ h4, p {
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-family: "Linotype-Bold";
-  }
-  h2 {
-    font-size: 1.5rem;
-    font-family: 'Demi';
-  }
-  h4, p {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: inherit;
-  }
-  .header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .header__logo {
-    margin-left: 1rem;
-  }
-  .nav {
-    width: inherit;
-  }
-  .nav__item {
-    margin-left: 1rem;
-    margin-right: 2rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .main-background {
-    height: 25rem;
-  }
-  .main-background__heading {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    font-family: "Linotype-Bold";
-    width: 70%;
-  }
-  .about__quote, .about-musicians__names {
-    font-size: 1.8rem;
-    width: 85%;
-  }
-  .about__description {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .about__description--para2 {
-    margin-left: 1rem;
-  }
-  .photo-gallery__image {
-    width: 30%;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-  }
   .footer__bandsite--logo {
     display: block;
   }
@@ -515,43 +615,6 @@ h4, p {
 }
 
 @media screen and (min-width: 1200px) {
-  .nav {
-    width: inherit;
-  }
-  .header__logo {
-    margin-left: 10rem;
-  }
-  .main-background {
-    height: 41.875rem;
-  }
-  .main-background__heading {
-    margin-left: 8.5rem;
-    width: 40%;
-  }
-  .about__div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .about__image, .about__description {
-    width: 75%;
-  }
-  .about__title {
-    margin-left: 8.5rem;
-  }
-  .about__quote, .about-musicians__names {
-    width: 75%;
-  }
-  .photo-gallery__image {
-    width: 25%;
-  }
   .footer__title, .footer--copyright {
     margin-left: 8rem;
   }
