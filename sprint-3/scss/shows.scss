@@ -20,7 +20,7 @@
         padding-top: 4rem;
         font-size: 1.5rem;
     }
-
+    //try using @content for specifying media queries
     @media screen and (min-width: $tablet-width) {
         height: 39rem;
         padding-left: 2rem;

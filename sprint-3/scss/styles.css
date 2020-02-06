@@ -1,8 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'Linotype';
   src: url("../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
@@ -16,6 +11,11 @@
 @font-face {
   font-family: 'Demi';
   src: url("../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {

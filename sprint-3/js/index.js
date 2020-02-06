@@ -1,35 +1,22 @@
-const commentsObj = [
-    {
-        name: 'Micheal Lyons',
-        timestamp: '12/18/2018',
-        comment: `They BLEW the ROOF off at their
-        last show, once everyone started
-        figuring out they were going. This is
-        still simply the greatest opening of a
-        concert I have EVER witnessed.`
-    },
-    {
-        name: 'Gary Wong',
-        timestamp: '12/12/2018',
-        comment: `Every time I see him shred I feel so
-        motivated to get off my couch and
-        hop on my board. He’s so talented! I
-        wish I can ride like him one day so I
-        can really enjoy myself!`
-    },
-    {
-        name: 'Theodore Duncan',
-        timestamp: '11/15/2018',
-        comment: `How can someone be so good!!!
-        You can tell he lives for this and
-        loves to do it every day. Everytime I
-        see him I feel instantly happy! He’s
-        definitely my favorite ever!`
-    }
-];
+let commentsObj = [];
+const myApiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+
+const fetchComments = () => {
+    axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey}`)
+     .then(res => {
+        commentsObj = res.data;
+        commentsObj = commentsObj.reverse();
+     })
+     .then(() => {
+        commentsObj.forEach(commentObj => {
+            displayComment(commentObj);
+        });
+     })
+     .catch(err => console.log(err));
+}
+
 
 const displayComment = commentObj => {
-
     const childDiv = document.createElement('div');
     childDiv.className = 'comments__subdiv';
     
@@ -62,14 +49,12 @@ const displayComment = commentObj => {
     commentsDisplayedDiv.appendChild(borderDiv)
 }
 
-commentsObj.forEach(commentObj => {
-    displayComment(commentObj);
-});
-
 const generateTodaysDate = () => {
     const today = new Date();
     return `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
 }
+
+fetchComments();
 
 const form = document.querySelector('#comment_form');
 form.addEventListener('submit', e => {
@@ -82,7 +67,22 @@ form.addEventListener('submit', e => {
     const currentDate = generateTodaysDate();
     userCommentObj.timestamp = currentDate;
     userCommentObj.comment = e.target.comment.value;
-    commentsObj.unshift(userCommentObj);
+    axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey}`, {
+        name: userCommentObj.name,
+        comment: userCommentObj.comment,
+    })
+    .then(res => {
+       //commentsObj.push({name: res.data.name, comment: res.data.comment, timestamp: res.data.timestamp});
+       fetchComments();
+    })
+    // .then(() => { //not behaving as expected
+    //     commentsObj.forEach(commentObj => {
+    //         displayComment(commentsObj);
+    //     })
+    // })
+    .catch(err => {
+        console.log(err);
+    })
 
     //clearing form fields
     form.reset();
@@ -92,10 +92,5 @@ form.addEventListener('submit', e => {
     while(commentsDisplayedDiv.firstChild) {
         commentsDisplayedDiv.removeChild(commentsDisplayedDiv.firstChild);
     }
-
-    //display all comments 
-    commentsObj.forEach(commentObj => {
-        displayComment(commentObj);
-    });
 
 });
