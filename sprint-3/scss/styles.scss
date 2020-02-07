@@ -426,6 +426,11 @@ h4,p {
     font-weight: normal;
 }
 
+.comment-border {
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 1rem;
+}
+
 .footer {
     background-color: $header-footer-background;
     color: $white-text;

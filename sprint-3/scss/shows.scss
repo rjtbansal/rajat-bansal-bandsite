@@ -140,7 +140,11 @@
         height: 3rem;
         border-radius: 5px;
         border-style: none;
-       
+    }
+
+    &__border {
+       border-bottom: 2px solid lightgray;
+       margin-bottom: 1rem; 
     }
 
     @media screen and (min-width: $tablet-width) {

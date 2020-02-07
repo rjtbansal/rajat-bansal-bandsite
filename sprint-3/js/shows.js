@@ -65,8 +65,6 @@ const createShowItem = (showDate, showVenue, showLocation) => {
     //bottom border
     const borderDiv = document.createElement('div');
     borderDiv.className = 'show__border';
-    borderDiv.style.borderBottom = '2px solid lightgray';
-    borderDiv.style.marginBottom = '1rem';
 
     const showsListDiv = document.querySelector('.shows__list');
     showsListDiv.appendChild(showDiv);

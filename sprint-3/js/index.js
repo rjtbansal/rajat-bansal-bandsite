@@ -36,9 +36,7 @@ const displayComment = commentObj => {
     commentTextP.textContent = commentObj.comment;
 
     const borderDiv = document.createElement('div');
-    borderDiv.className = 'show__border';
-    borderDiv.style.borderBottom = '2px solid lightgray';
-    borderDiv.style.marginBottom = '1rem';
+    borderDiv.className = 'comment-border';
 
     const commentsDisplayedDiv = document.querySelector('.comments__displayed');
     commentsDisplayedDiv.appendChild(childDiv);
