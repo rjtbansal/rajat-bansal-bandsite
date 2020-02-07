@@ -1,35 +1,6 @@
-const shows = [
-    {
-        timestamp: 'Mon Dec 17 2018',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        timestamp: 'Tue Jul 18 2019',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        timestamp: 'Fri Jul 22 2019',
-        venue: 'View Loungue',
-        location: 'San Francisco, CA'
-    },
-    {
-        timestamp: 'Sat Aug 12 2019',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        timestamp: 'Fri Sep 05 2019', 
-        venue: 'Moscow Center', 
-        location: 'San Francisco, CA'
-    },
-    {
-        timestamp: 'Wed Aug 11 2019', 
-        venue: 'Pres Club', 
-        location: 'San Francisco, CA'
-    }
-];
+let shows = [];
+
+const myApiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
 const createShowItem = (showDate, showVenue, showLocation) => {
     
@@ -128,13 +99,24 @@ const createShowHeadings = () => {
 
 }
 
-//pending items:
-//add bottom border for each row in tab and desk mode
+const fetchShows = () => {
+    axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${myApiKey}`)
+         .then(res => {
+             shows = res.data;
+         })
+         .then(() => {
+            shows.forEach(show => {
+                createShowItem(show.date, show.place, show.location);
+            });
+            createShowHeadings();
+         })
+         .catch(err => console.log(`Error encountered: ${err}`));
+}
 
-shows.forEach(show => {
-    createShowItem(show.timestamp, show.venue, show.location);
-});
-createShowHeadings();
+fetchShows();
+
+
+
 
 
 

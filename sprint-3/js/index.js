@@ -29,7 +29,7 @@ const displayComment = commentObj => {
 
     const commentDateH4 = document.createElement('h4');
     commentDateH4.className = 'comment-date';
-    commentDateH4.textContent = commentObj.timestamp;
+    commentDateH4.textContent = new Date(commentObj.timestamp).toDateString();
 
     const commentTextP = document.createElement('p');
     commentTextP.className = 'comment-text';
@@ -72,14 +72,8 @@ form.addEventListener('submit', e => {
         comment: userCommentObj.comment,
     })
     .then(res => {
-       //commentsObj.push({name: res.data.name, comment: res.data.comment, timestamp: res.data.timestamp});
        fetchComments();
     })
-    // .then(() => { //not behaving as expected
-    //     commentsObj.forEach(commentObj => {
-    //         displayComment(commentsObj);
-    //     })
-    // })
     .catch(err => {
         console.log(err);
     })
