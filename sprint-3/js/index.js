@@ -3,9 +3,13 @@ const myApiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
 const fetchComments = () => {
     axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey}`)
+    //sorting by timestamp in descending order
      .then(res => {
         commentsObj = res.data;
-        commentsObj = commentsObj.reverse();
+        commentsObj.sort((a,b) => {
+            console.log(a.timestamp, b.timestamp)
+            return b.timestamp - a.timestamp;
+        });
      })
      .then(() => {
         commentsObj.forEach(commentObj => {
@@ -29,7 +33,9 @@ const displayComment = commentObj => {
 
     const commentDateH4 = document.createElement('h4');
     commentDateH4.className = 'comment-date';
-    commentDateH4.textContent = new Date(commentObj.timestamp).toDateString();
+
+    commentDateH4.textContent = `${new Date(commentObj.timestamp).toDateString()}
+                                | ${new Date(commentObj.timestamp).toLocaleTimeString()}`;
 
     const commentTextP = document.createElement('p');
     commentTextP.className = 'comment-text';
