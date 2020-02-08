@@ -7,7 +7,6 @@ const fetchComments = () => {
      .then(res => {
         commentsObj = res.data;
         commentsObj.sort((a,b) => {
-            console.log(a.timestamp, b.timestamp)
             return b.timestamp - a.timestamp;
         });
      })
@@ -16,6 +15,14 @@ const fetchComments = () => {
             displayComment(commentObj);
         });
      })
+    //  .then(() => {
+    //     //delete comment
+    //     const deleteCommentButton = document.querySelector('.comment-delete-button');
+    //     deleteCommentButton.addEventListener('click', e => {
+    //         e.preventDefault();
+    //         console.log(e);
+    //     });
+    // })
      .catch(err => console.log(err));
 }
 
@@ -34,8 +41,12 @@ const displayComment = commentObj => {
     const commentDateH4 = document.createElement('h4');
     commentDateH4.className = 'comment-date';
 
-    commentDateH4.textContent = `${new Date(commentObj.timestamp).toDateString()}
-                                | ${new Date(commentObj.timestamp).toLocaleTimeString()}`;
+    commentDateH4.textContent = new Date(commentObj.timestamp).toDateString()
+
+    //delete: come back to it later
+    // const deleteCommentBtn = document.createElement('button');
+    // deleteCommentBtn.className = 'comment-delete-button';
+    // deleteCommentBtn.textContent = 'DELETE';
 
     const commentTextP = document.createElement('p');
     commentTextP.className = 'comment-text';
@@ -49,13 +60,15 @@ const displayComment = commentObj => {
     childDiv.appendChild(imagePlaceHolderDiv);
     childDiv.appendChild(commentAuthorNameH4);
     childDiv.appendChild(commentDateH4);
+    //childDiv.appendChild(deleteCommentBtn);
     commentsDisplayedDiv.appendChild(commentTextP);
-    commentsDisplayedDiv.appendChild(borderDiv)
-}
+    commentsDisplayedDiv.appendChild(borderDiv);
 
-const generateTodaysDate = () => {
-    const today = new Date();
-    return `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
+    // const deleteCommentButton = document.querySelector('.comment-delete-button');
+    //     deleteCommentButton.addEventListener('click', e => {
+    //         e.preventDefault();
+    //         console.log(this);
+    // });
 }
 
 fetchComments();
@@ -64,12 +77,7 @@ const form = document.querySelector('#comment_form');
 form.addEventListener('submit', e => {
     e.preventDefault();
     const userCommentObj = {};
-
     userCommentObj.name = e.target.name.value;
-
-    //generating today's date
-    const currentDate = generateTodaysDate();
-    userCommentObj.timestamp = currentDate;
     userCommentObj.comment = e.target.comment.value;
     axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${myApiKey}`, {
         name: userCommentObj.name,
@@ -92,3 +100,4 @@ form.addEventListener('submit', e => {
     }
 
 });
+

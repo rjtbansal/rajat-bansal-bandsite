@@ -431,6 +431,13 @@ h4,p {
     margin-bottom: 1rem;
 }
 
+.comment-delete-button {
+    height: 2rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
 .footer {
     background-color: $header-footer-background;
     color: $white-text;
