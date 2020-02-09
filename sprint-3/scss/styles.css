@@ -13,16 +13,6 @@
   src: url("../Assets/Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Linotype';
-}
-
 h1 {
   font-size: 2rem;
   line-height: 2.5rem;
@@ -62,6 +52,16 @@ h4, p {
     line-height: 1.375rem;
     font-family: inherit;
   }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Linotype';
 }
 
 .main-background {
@@ -233,7 +233,7 @@ h4, p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .about__quote, .about-musicians__names {
     width: 75%;
   }
@@ -444,6 +444,18 @@ h4, p {
   margin-bottom: 0.8rem;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__section {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments__section {
+    width: 50%;
+  }
+}
+
 .comments__subdiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,6 +463,14 @@ h4, p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__subdiv {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .comments__displayed {
@@ -461,19 +481,20 @@ h4, p {
 }
 
 @media screen and (min-width: 768px) {
-  .comments__section {
-    width: 80%;
-  }
   .comments__displayed {
     margin-left: 0;
     margin-right: 0;
     width: 80%;
   }
-  .comments__subdiv {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+}
+
+@media screen and (min-width: 1200px) {
+  .comments__displayed {
+    width: 50%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .comments__title {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -482,12 +503,6 @@ h4, p {
 }
 
 @media screen and (min-width: 1200px) {
-  .comments__section {
-    width: 50%;
-  }
-  .comments__displayed {
-    width: 50%;
-  }
   .comments__title {
     margin-left: 10rem;
   }
@@ -508,6 +523,12 @@ h4, p {
   background: #E1E1E1;
 }
 
+@media screen and (min-width: 768px) {
+  .comment-author__image {
+    margin-right: 1rem;
+  }
+}
+
 .comment-author__name {
   position: absolute;
   left: 6rem;
@@ -516,9 +537,6 @@ h4, p {
 @media screen and (min-width: 768px) {
   .comment-author__name {
     position: static;
-    margin-right: 1rem;
-  }
-  .comment-author__image {
     margin-right: 1rem;
   }
 }
@@ -556,16 +574,47 @@ h4, p {
   font-size: 3rem;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__title {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    margin-left: 8rem;
+  }
+}
+
 .footer__icons {
   padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__icons {
+    margin-right: 30rem;
+  }
 }
 
 .footer__icon {
   margin-right: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__icon {
+    padding-right: 1rem;
+    padding-top: 3rem;
+  }
+}
+
 .footer__bandsite--logo {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__bandsite--logo {
+    display: block;
+  }
 }
 
 .footer__contact--name {
@@ -586,14 +635,23 @@ h4, p {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer--copyright {
+    margin-left: 8rem;
+  }
+}
+
 .footer-rights {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .footer__bandsite--logo {
-    display: block;
+  .footer-rights {
+    display: inline;
   }
+}
+
+@media screen and (min-width: 768px) {
   .footer--block1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -605,9 +663,15 @@ h4, p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  .footer__title {
-    padding-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer--block1 {
+    width: 90%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .footer--info-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -617,28 +681,12 @@ h4, p {
             justify-content: space-between;
     width: 95%;
   }
-  .footer__icon {
-    padding-right: 1rem;
-    padding-top: 3rem;
-  }
-  .footer-rights {
-    display: inline;
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .footer__title, .footer--copyright {
-    margin-left: 8rem;
-  }
-  .footer--block1 {
-    width: 90%;
-  }
   .footer--info-block {
     width: 60%;
     margin-left: 8rem;
-  }
-  .footer__icons {
-    margin-right: 30rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

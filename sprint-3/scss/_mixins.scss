@@ -1,5 +1,19 @@
+@import 'variables';
+
 @mixin set-font-properties($font-size, $line-height:inherit, $font-family:inherit) {
     font-size: $font-size;
     line-height: $line-height;
     font-family: $font-family;
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
 }

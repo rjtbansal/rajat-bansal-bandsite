@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'fonts'; 
 @import 'mixins';
+@import 'typography';
 
 $header-footer-background: #323232;
 
@@ -11,31 +12,6 @@ $header-footer-background: #323232;
 body {
     margin: 0;
     font-family: 'Linotype';
-}
-
-h1 {
-    @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
-
-    @media screen and (min-width: $tablet-width){
-        @include set-font-properties(2.25rem, 2.75rem, 'Linotype-Bold');
-    }
-}
-
-h2 {
-    @include set-font-properties(0.875rem, 1.375rem, 'Demi');
-
-    @media screen and (min-width: $tablet-width) { 
-        font-size: 1.5rem;
-        font-family: 'Demi';
-    }
-}
-
-h4,p {
-    @include set-font-properties(0.8125rem, 1.125rem);
-
-    @media screen and (min-width: $tablet-width) {
-        @include set-font-properties(0.875rem, 1.375rem);
-    }
 }
 
 .main-background{
@@ -50,22 +26,22 @@ h4,p {
         width: 70%;
         padding-left: 1.5rem;
 
-        @media screen and (min-width: $tablet-width){
+        @include tablet{
             @include set-font-properties(3.75rem, 4.25rem, 'Linotype-Bold');
             width: 70%;
         }
 
-        @media screen and (min-width: $desktop-width) {
+        @include desktop {
             margin-left: 8.5rem;
             width: 40%;
         }
     }
 
-    @media screen and (min-width: $tablet-width) {
+    @include tablet {
         height: 25rem;
     }
 
-    @media screen and (min-width: $desktop-width) {
+    @include desktop {
         height: 41.875rem;
     }
 }
@@ -81,23 +57,23 @@ h4,p {
     &__logo {
         padding-bottom: 1rem;
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             margin-left: 1rem;
         }
 
-        @media screen and (min-width: $desktop-width) {
+        @include desktop {
             margin-left: 10rem;
+        }
+
+         //diving deeper: hover effect on clickable Logo
+        &:hover {
+            cursor: pointer;
+            border-bottom: thick solid white;
+            padding-bottom: 1rem;
         }
     }
 
-    //diving deeper: hover effect on clickable Logo
-    &__logo:hover {
-        cursor: pointer;
-        border-bottom: thick solid white;
-        padding-bottom: 1rem;
-    }
-
-    @media screen and (min-width: $tablet-width){
+    @include tablet {
         flex-direction: row;
     }
 }
@@ -123,23 +99,23 @@ h4,p {
             color: inherit;
         }
 
-        @media screen and (min-width: $tablet-width){
+        @include tablet {
             margin-left: 1rem;
             margin-right: 2rem;          
             //required to control space between nav items and reduce bottom border in tab mode 
             padding-left: 0;
             padding-right: 0;
         }
+
+        // diving deeper: hover effect on each nav item
+        &:hover {
+            cursor: pointer;
+            padding-bottom: 1rem;
+            color: lightgreen;
+        }
     }
 
-    // diving deeper: hover effect on each nav item
-    &__item:hover {
-        cursor: pointer;
-        padding-bottom: 1rem;
-        color: lightgreen;
-    }
-
-    @media screen and (min-width: $tablet-width) {
+    @include tablet {
         width: inherit;
     }
     
@@ -151,7 +127,7 @@ h4,p {
     &__image {
         width: 95%;
 
-        @media screen and (min-width: $desktop-width) {
+        @include desktop {
             width: 75%;
         }
     }
@@ -159,12 +135,12 @@ h4,p {
     &__quote, &-musicians__names {
         @include set-font-properties(1.5rem, inherit, 'Demi');
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             font-size: 1.8rem;
             width: 85%;
         }
 
-        @media screen and (min-width: $tablet-width) {
+        @include desktop{
             width: 75%;
         }
     }
@@ -179,7 +155,7 @@ h4,p {
         display: flex;
         flex-direction: column;
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             flex-direction: row;
 
             &--para2 {
@@ -187,12 +163,12 @@ h4,p {
             }
         }
 
-        @media screen and (min-width: $desktop-width){
+        @include desktop{
             width: 75%;
         }
     }
 
-    @media screen and (min-width: $desktop-width){
+    @include desktop{
         &__div{
             display: flex;
             flex-direction: column;
@@ -213,7 +189,7 @@ h4,p {
     &__title {
         margin-left: 1rem;
 
-        @media screen and (min-width: $desktop-width) {
+        @include desktop {
             margin-left: 10rem;
         }
     }
@@ -223,7 +199,7 @@ h4,p {
         flex-direction: column;
         align-items: center;
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
@@ -236,22 +212,21 @@ h4,p {
         //diving deeper: grayscale image by default
         filter: grayscale(100%);
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             width: 30%;
             margin-bottom: 1rem;
             margin-right: 1rem;
         }
 
-        @media screen and (min-width: $desktop-width) {
+        @include desktop {
             width: 25%;
         }
-        
-    }
 
-    //diving deeper: grayscale image converts to color on hover
-    &__image:hover {
-        filter: grayscale(0);
-        cursor: pointer;
+        //diving deeper: grayscale image converts to color on hover
+        &:hover {
+            filter: grayscale(0);
+            cursor: pointer;
+        }        
     }
 }
 
@@ -308,13 +283,13 @@ h4,p {
         border-radius: 5px;
         border-style: none;
 
-        @media screen and (min-width: $tablet-width) {
+        @include tablet {
             width: 10rem;
             float: right;
         }
     }
 
-    @media screen and (min-width: $tablet-width) {
+    @include tablet {
         width: 100%;
     }
 }
@@ -327,11 +302,23 @@ h4,p {
     &__section{
         display: flex;
         margin-bottom: 0.8rem;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
     }
 
     &__subdiv {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
     }
 
     &__displayed {
@@ -339,44 +326,29 @@ h4,p {
         margin-right: 2rem;
         border-top: 2px solid lightgray;
         padding-top: 1rem;
-    }
 
-    @media screen and (min-width: $tablet-width){
-        &__section{
-            width: 80%;
-        }
-
-        &__displayed {
+        @include tablet {
             margin-left: 0;
             margin-right: 0;
             width: 80%;
         }
 
-        &__subdiv {
-            justify-content: flex-start;
+        @include desktop {
+            width: 50%;
         }
-
-        &__title {
+    }
+  
+    &__title {
+        @include tablet{
             align-self: flex-start;
             margin-left: 1rem;
         }
-        
-    }
 
-    @media screen and (min-width: $desktop-width){
-        &__section{
-            width: 50%;
-        }
-
-        &__displayed {
-            width: 50%;
-        }
-
-        &__title {
+        @include desktop {
             margin-left: 10rem;
         }
     }
-    
+        
 }
 
 .author-image{
@@ -394,25 +366,21 @@ h4,p {
         width: 3rem;
         height: 3rem;
         background: #E1E1E1;
+
+        @include tablet {
+            margin-right: 1rem;
+        }
     }
 
     &__name {
         position: absolute;
         left: 6rem;
-    }
 
-    @media screen and (min-width: $tablet-width){
-
-        &__name {
+        @include tablet {
             position: static;
             margin-right: 1rem;
         }
-
-        &__image {
-            margin-right: 1rem;
-        }
     }
-
 
 }
 
@@ -446,18 +414,39 @@ h4,p {
     &__title {
         padding-top: 4rem;
         font-size: 3rem;
+
+        @include tablet {
+            padding-top: 0;
+        }
+
+        @include desktop {
+            margin-left: 8rem;
+        }
     }
 
     &__icons {
         padding-bottom: 1.5rem;
+
+        @include desktop {
+            margin-right: 30rem;
+        }
     }
 
     &__icon {
         margin-right: 2rem;
+
+        @include tablet {
+            padding-right: 1rem;
+            padding-top: 3rem;
+        }
     }
 
     &__bandsite--logo{
         display: none;
+
+        @include tablet {
+            display: block;
+        }
     }
 
     &__contact--name{
@@ -478,18 +467,23 @@ h4,p {
     &--copyright{
         padding-bottom: 1rem;
         margin-bottom: 0;
+
+        @include desktop {
+            margin-left: 8rem;
+        }
     }
 
     &-rights{
         display: block;
+
+        @include tablet {
+            display: inline;
+        }
     }
 
-    @media screen and (min-width: $tablet-width){
-        &__bandsite--logo {
-            display: block;
-        }
+    &--block1{
 
-        &--block1{
+        @include tablet {
             display: flex;
             justify-content: space-between;
             width: 95%;
@@ -497,44 +491,25 @@ h4,p {
             padding-bottom: 1.5rem;
         }
 
-        &__title {
-            padding-top: 0;
+        @include desktop {
+            width: 90%;
         }
+    }
 
-        &--info-block{
+    &--info-block{
+
+        @include tablet {
             display: flex;
             justify-content: space-between;
             width: 95%;
         }
 
-        &__icon {
-            padding-right: 1rem;
-            padding-top: 3rem;
-        }
-
-        &-rights{
-            display: inline;
-        }
-    }
-
-    @media screen and (min-width: $desktop-width) {
-        &__title, &--copyright{
-            margin-left: 8rem;
-        }
-
-        &--block1 {
-            width: 90%;
-        }
-
-        &--info-block{
+        @include desktop {
             width: 60%;
             margin-left: 8rem;
         }
-
-        &__icons {
-            margin-right: 30rem;
-        }
     }
+
 }
 
 
