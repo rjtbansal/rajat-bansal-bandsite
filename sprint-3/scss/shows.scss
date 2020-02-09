@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'fonts'; 
+@import 'mixins';
+@import 'typography';
 
 .shows-background{
     background: linear-gradient(rgba(0,0,0,0.50)), url(../Assets/Images/shows-cover.jpg) left 10% bottom 42%/cover no-repeat border-box;
@@ -14,48 +17,56 @@
         width: 80%;
         font-size: 2.8125rem;
         line-height: normal;
+
+        @include tablet {
+            width: 60%;
+            font-size: 3rem;
+        }
+
+        @include desktop {
+            width: 30rem;
+        }
     }
 
     &__heading--h2 {
         padding-top: 4rem;
         font-size: 1.5rem;
-    }
-    //try using @content for specifying media queries
-    @media screen and (min-width: $tablet-width) {
-        height: 39rem;
-        padding-left: 2rem;
-        &__heading--h1 {
-            width: 60%;
-            font-size: 3rem;
-        }
 
-        &__heading--h2 {
+        @include tablet {
             padding-top: 6rem;
         }
-
-        &__music {
-            width: 50%;
-        }
     }
 
-    @media screen and (min-width: $desktop-width) {
-        flex-direction: row;
-        align-items: center;
-        
-        &__headings{
-            padding-left: 8rem;
+    
+    &__music {
+        @include tablet {
+            width: 50%;
         }
 
-        &__heading--h1{
-            width: 30rem;
-        }
-
-        &__music {
+        @include desktop {
             width: 30rem;
             margin-top: 6.5rem;
             margin-left: 5rem;
         }
     }
+    
+    //try using @content for specifying media queries
+    @include tablet {
+        height: 39rem;
+        padding-left: 2rem;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__headings{
+        @include desktop {
+            padding-left: 8rem;
+        }
+    }
+
 }
 
 .shows {
@@ -66,6 +77,10 @@
     &__title {
         font-size: 1.5625rem;
         font-family: 'Linotype-Bold';
+
+        @include tablet {
+            font-size: 2rem;
+        }
     }
 
     &__list{
@@ -74,38 +89,27 @@
 
         &--headings{
             display: none;
-        }
-    }
-
-    @media screen and (min-width: $tablet-width) {
-        padding: 2rem 2rem 0 2rem;
-
-        &__title {
-            font-size: 2rem;
-        }
-
-        &__list {
-
-            &--headings {
+            
+            @include tablet {
                 display: flex;
                 justify-content: space-between;
                 width: 60%;
             }
         }
 
-    }
-
-    @media screen and (min-width: $desktop-width) {
-
-        display: flex;
-        justify-content: space-around;
-
-        &__list {
+        @include desktop {
             width: 60%;
         }
     }
 
+    @include tablet {
+        padding: 2rem 2rem 0 2rem;
+    }
 
+    @include desktop {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .show {
@@ -113,6 +117,10 @@
     &__date {
         &--heading{
             color: $show-heading-label-color;
+        }
+
+        @include tablet {
+            width: 25%;
         }
     }
     &__venue {
@@ -122,6 +130,10 @@
         &--value{
             font-weight: normal;
         }
+
+        @include tablet{
+            width: 25%;
+        }
     }
     &__location {
         &--heading{
@@ -129,6 +141,10 @@
         }
         &--value{
             font-weight: normal;
+        }
+
+        @include tablet{
+            width: 25%;
         }
     }
     &__button {
@@ -140,6 +156,10 @@
         height: 3rem;
         border-radius: 5px;
         border-style: none;
+
+        @include tablet {
+            width: 20%;
+        }
     }
 
     &__border {
@@ -147,22 +167,15 @@
        margin-bottom: 1rem; 
     }
 
-    @media screen and (min-width: $tablet-width) {
-        
-        display: flex;
-        justify-content: space-between;
-
-        &__heading--visibility {
+    &__heading--visibility {
+        @include tablet {
             display: none;
         }
+    }
 
-        &__button {
-            width: 20%;
-        }
-
-        &__date , &__venue, &__location{
-            width: 25%;
-        }
+    @include tablet {        
+        display: flex;
+        justify-content: space-between;
     }
 
 }
