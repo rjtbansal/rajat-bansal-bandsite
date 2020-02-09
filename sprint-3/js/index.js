@@ -15,14 +15,6 @@ const fetchComments = () => {
             displayComment(commentObj);
         });
      })
-    //  .then(() => {
-    //     //delete comment
-    //     const deleteCommentButton = document.querySelector('.comment-delete-button');
-    //     deleteCommentButton.addEventListener('click', e => {
-    //         e.preventDefault();
-    //         console.log(e);
-    //     });
-    // })
      .catch(err => console.log(err));
 }
 
@@ -43,10 +35,21 @@ const displayComment = commentObj => {
 
     commentDateH4.textContent = new Date(commentObj.timestamp).toDateString()
 
-    //delete: come back to it later
-    // const deleteCommentBtn = document.createElement('button');
-    // deleteCommentBtn.className = 'comment-delete-button';
-    // deleteCommentBtn.textContent = 'DELETE';
+    //delete: diving deeper
+    const deleteCommentBtn = document.createElement('button');
+    deleteCommentBtn.className = 'comment-delete-button';
+    deleteCommentBtn.textContent = 'DELETE';
+    deleteCommentBtn.addEventListener('click', e => {
+        axios.delete(`https://project-1-api.herokuapp.com/comments/${commentObj.id}?api_key=${myApiKey}`)
+            .then(res => {
+                console.log(res);
+                clearComments();
+                fetchComments();
+            })
+            .catch(err => {
+                    console.log(err)
+            });
+    });
 
     const commentTextP = document.createElement('p');
     commentTextP.className = 'comment-text';
@@ -60,15 +63,17 @@ const displayComment = commentObj => {
     childDiv.appendChild(imagePlaceHolderDiv);
     childDiv.appendChild(commentAuthorNameH4);
     childDiv.appendChild(commentDateH4);
-    //childDiv.appendChild(deleteCommentBtn);
+    childDiv.appendChild(deleteCommentBtn);
     commentsDisplayedDiv.appendChild(commentTextP);
     commentsDisplayedDiv.appendChild(borderDiv);
 
-    // const deleteCommentButton = document.querySelector('.comment-delete-button');
-    //     deleteCommentButton.addEventListener('click', e => {
-    //         e.preventDefault();
-    //         console.log(this);
-    // });
+}
+
+const clearComments = () => {
+    const commentsDisplayedDiv = document.querySelector('.comments__displayed');
+    while(commentsDisplayedDiv.firstChild) {
+        commentsDisplayedDiv.removeChild(commentsDisplayedDiv.firstChild);
+    }
 }
 
 fetchComments();
@@ -94,10 +99,9 @@ form.addEventListener('submit', e => {
     form.reset();
     
     //clearing all comments from page
-    const commentsDisplayedDiv = document.querySelector('.comments__displayed');
-    while(commentsDisplayedDiv.firstChild) {
-        commentsDisplayedDiv.removeChild(commentsDisplayedDiv.firstChild);
-    }
+    clearComments();
 
 });
+
+
 

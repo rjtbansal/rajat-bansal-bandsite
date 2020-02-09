@@ -551,6 +551,12 @@ body {
   font-weight: normal;
 }
 
+@media screen and (min-width: 768px) {
+  .comment-date {
+    margin-right: 1rem;
+  }
+}
+
 .comment-border {
   border-bottom: 2px solid lightgray;
   margin-bottom: 1rem;
@@ -561,6 +567,11 @@ body {
   background-color: red;
   color: white;
   cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-style: none;
+  border-radius: 5px;
 }
 
 .footer {

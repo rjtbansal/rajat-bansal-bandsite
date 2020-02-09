@@ -392,6 +392,10 @@ body {
 .comment-date {
     color: #AFAFAF;
     font-weight: normal;
+
+    @include tablet {
+        margin-right: 1rem;
+    }
 }
 
 .comment-border {
@@ -404,6 +408,9 @@ body {
     background-color: red;
     color: white;
     cursor: pointer;
+    align-self: center;
+    border-style: none;
+    border-radius: 5px;
 }
 
 .footer {
