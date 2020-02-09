@@ -51,6 +51,24 @@ const displayComment = commentObj => {
             });
     });
 
+    const likeCommentButton = document.createElement('button');
+    likeCommentButton.className = 'comment-like-button';
+    likeCommentButton.textContent = 'LIKE';
+
+    //like comments: diving deeper. 
+    let currentLikes = commentObj.likes;
+    likeCommentButton.addEventListener('click', e => {
+        axios.put(`https://project-1-api.herokuapp.com/comments/${commentObj.id}/like?api_key=${myApiKey}`, {
+            likes: currentLikes++
+        })
+        .then(res => {
+                  console.log(res.data); //this response object will have number of likes
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    });
+
     const commentTextP = document.createElement('p');
     commentTextP.className = 'comment-text';
     commentTextP.textContent = commentObj.comment;
@@ -63,8 +81,10 @@ const displayComment = commentObj => {
     childDiv.appendChild(imagePlaceHolderDiv);
     childDiv.appendChild(commentAuthorNameH4);
     childDiv.appendChild(commentDateH4);
-    childDiv.appendChild(deleteCommentBtn);
+
     commentsDisplayedDiv.appendChild(commentTextP);
+    commentsDisplayedDiv.appendChild(deleteCommentBtn);
+    commentsDisplayedDiv.appendChild(likeCommentButton);
     commentsDisplayedDiv.appendChild(borderDiv);
 
 }

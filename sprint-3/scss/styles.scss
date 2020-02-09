@@ -411,6 +411,19 @@ body {
     align-self: center;
     border-style: none;
     border-radius: 5px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.comment-like-button {
+    height: 2rem;
+    background-color: salmon;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    border-style: none;
+    border-radius: 5px;
+    width: 4rem;
 }
 
 .footer {

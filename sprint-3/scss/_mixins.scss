@@ -6,6 +6,12 @@
     font-family: $font-family;
 }
 
+@mixin mobileMax {
+    @media screen and (max-width: $tablet-width){
+        @content;
+    }
+}
+
 @mixin tablet {
     @media screen and (min-width: $tablet-width) {
         @content;
