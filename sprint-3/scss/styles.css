@@ -273,6 +273,18 @@ body {
   }
 }
 
+.about__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Linotype-bold";
+}
+
+@media screen and (min-width: 1200px) {
+  .about__title {
+    margin-left: 8.5rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .about__div {
     display: -webkit-box;
@@ -286,9 +298,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .about__title {
-    margin-left: 8.5rem;
-  }
 }
 
 .photo-gallery {
@@ -297,6 +306,9 @@ body {
 }
 
 .photo-gallery__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Linotype-bold";
   margin-left: 1rem;
 }
 
@@ -494,6 +506,12 @@ body {
   }
 }
 
+.comments__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Linotype-bold";
+}
+
 @media screen and (min-width: 768px) {
   .comments__title {
     -ms-flex-item-align: start;
@@ -596,6 +614,9 @@ body {
 }
 
 .footer__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Linotype-bold";
   padding-top: 4rem;
   font-size: 3rem;
 }

@@ -168,17 +168,20 @@ body {
         }
     }
 
-    @include desktop{
-        &__div{
+    &__title {
+        @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
+
+        @include desktop {
+            margin-left: 8.5rem;
+        }
+    }
+
+    &__div {
+        @include desktop{
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
-        &__title {
-            margin-left: 8.5rem;
-        }
-
     }
 }
 
@@ -187,8 +190,8 @@ body {
     padding-top: 0.5rem;
 
     &__title {
+        @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
         margin-left: 1rem;
-
         @include desktop {
             margin-left: 10rem;
         }
@@ -339,6 +342,7 @@ body {
     }
   
     &__title {
+        @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
         @include tablet{
             align-self: flex-start;
             margin-left: 1rem;
@@ -432,6 +436,7 @@ body {
     padding-left: 1rem;
 
     &__title {
+        @include set-font-properties(2rem, 2.5rem, 'Linotype-bold');
         padding-top: 4rem;
         font-size: 3rem;
 
